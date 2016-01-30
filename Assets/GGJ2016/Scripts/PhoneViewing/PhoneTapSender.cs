@@ -32,6 +32,13 @@ public class PhoneTapSender : MonoBehaviour
             if (button != null)
             {
                 ExecuteEvents.Execute(button.gameObject, pointer, ExecuteEvents.pointerClickHandler);
+                break;
+            }
+            else
+            {
+                Image image = result.gameObject.GetComponent<Image>();
+                if (image != null && image.raycastTarget)
+                    break;
             }
         }
     }
