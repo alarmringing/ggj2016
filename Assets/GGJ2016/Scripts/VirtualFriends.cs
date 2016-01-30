@@ -111,14 +111,27 @@ public class VirtualFriends : MonoBehaviour {
 		ReceiveMessages();
 	}
 	
-	GameObject messagesUICanvas;
-	GameObject messageUICanvas;
-	GameObject gameUICanvas;
+	public GameObject messagesUICanvas;
+	public GameObject messageUICanvas;
+	public GameObject gameUICanvas;
 	
 	public void MenubarButton()
 	{
 		messagesUICanvas.SetActive(true);
 		gameUICanvas.SetActive(false);
+		messageUICanvas.SetActive(false);
+	}
+	
+	public void MessageButton()
+	{
+		messagesUICanvas.SetActive(false);
+		gameUICanvas.SetActive(false);
+		messageUICanvas.SetActive(true);
+	}
+	public void GameButton()
+	{
+		messagesUICanvas.SetActive(false);
+		gameUICanvas.SetActive(true);
 		messageUICanvas.SetActive(false);
 	}
 }
