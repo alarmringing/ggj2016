@@ -1,0 +1,1145 @@
+fileFormatVersion: 2
+guid: 531f9a14b5e804824bfa97e57b8d37a1
+timeCreated: 1454154259
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Active Camera
+    100002: //RootNode
+    100004: Camera
+    100006: door-frame
+    100008: door-left
+    100010: door-right
+    100012: G-
+    100014: G-.001
+    100016: G-.002
+    100018: G-.003
+    100020: G-.004
+    100022: G-.005
+    100024: G-.006
+    100026: G-.007
+    100028: G-.008
+    100030: G-.009
+    100032: G-.010
+    100034: G-.011
+    100036: G-.012
+    100038: G-.013
+    100040: G-.014
+    100042: G-.015
+    100044: Group#10
+    100046: Group#10.001
+    100048: Group#15
+    100050: Group#15.001
+    100052: Group#15.002
+    100054: Group#15.003
+    100056: Group#15.004
+    100058: Group#15.005
+    100060: Group#15.006
+    100062: Group#15.007
+    100064: Group#16
+    100066: Group#16.001
+    100068: Group#17
+    100070: Group#17.001
+    100072: Group#19
+    100074: Group#19.001
+    100076: Group#2
+    100078: Group#20
+    100080: Group#20.001
+    100082: Group#20.002
+    100084: Group#20.003
+    100086: Group#20.004
+    100088: Group#20.005
+    100090: Group#20.006
+    100092: Group#20.007
+    100094: Group#20.008
+    100096: Group#20.009
+    100098: Group#20.010
+    100100: Group#20.011
+    100102: Group#20.012
+    100104: Group#20.013
+    100106: Group#21
+    100108: Group#21.001
+    100110: Group#21.002
+    100112: Group#21.003
+    100114: Group#21.004
+    100116: Group#21.005
+    100118: Group#22
+    100120: Group#22.001
+    100122: Group#22.002
+    100124: Group#22.003
+    100126: Group#22.004
+    100128: Group#22.005
+    100130: Group#22.006
+    100132: Group#22.007
+    100134: Group#23
+    100136: Group#23.001
+    100138: Group#24
+    100140: Group#24.001
+    100142: Group#24.002
+    100144: Group#24.003
+    100146: Group#25
+    100148: Group#26
+    100150: Group#26.001
+    100152: Group#27
+    100154: Group#27.001
+    100156: Group#27.002
+    100158: Group#27.003
+    100160: Group#27.004
+    100162: Group#28
+    100164: Group#28.001
+    100166: Group#28.002
+    100168: Group#28.003
+    100170: Group#28.004
+    100172: Group#28.005
+    100174: Group#28.006
+    100176: Group#28.007
+    100178: Group#28.008
+    100180: Group#28.009
+    100182: Group#32
+    100184: Group#32.001
+    100186: Group#34
+    100188: Group#34.001
+    100190: Group#34.002
+    100192: Group#34.003
+    100194: Group#34.004
+    100196: Group#34.005
+    100198: Group#34.006
+    100200: Group#34.007
+    100202: Group#35
+    100204: Group#35.001
+    100206: Group#35.002
+    100208: Group#35.003
+    100210: Group#36
+    100212: Group#36.001
+    100214: Group#36.002
+    100216: Group#36.003
+    100218: Group#37
+    100220: Group#37.001
+    100222: Group#37.002
+    100224: Group#37.003
+    100226: Group#38
+    100228: Group#38.001
+    100230: Group#39
+    100232: Group#39.001
+    100234: Group#4
+    100236: Group#4.001
+    100238: Group#40
+    100240: Group#40.001
+    100242: Group#40.002
+    100244: Group#40.003
+    100246: Group#43
+    100248: Group#45
+    100250: Group#45.001
+    100252: Group#45.002
+    100254: Group#45.003
+    100256: Group#46
+    100258: Group#46.001
+    100260: Group#46.002
+    100262: Group#46.003
+    100264: Group#48
+    100266: Group#48.001
+    100268: Group#48.002
+    100270: Group#48.003
+    100272: Group#48.004
+    100274: Group#48.005
+    100276: Group#48.006
+    100278: Group#48.007
+    100280: Group#49
+    100282: Group#50
+    100284: Group#50.001
+    100286: Group#50.002
+    100288: Group#50.003
+    100290: Group#50.004
+    100292: Group#50.005
+    100294: Group#50.006
+    100296: Group#50.007
+    100298: Group#50.008
+    100300: Group#50.009
+    100302: Group#50.010
+    100304: Group#50.011
+    100306: Group#50.012
+    100308: Group#50.013
+    100310: Group#50.014
+    100312: Group#50.015
+    100314: Group#50.016
+    100316: Group#50.017
+    100318: Group#56
+    100320: Group#56.001
+    100322: Group#56.002
+    100324: Group#56.003
+    100326: Group#57
+    100328: Group#57.001
+    100330: Group#57.002
+    100332: Group#57.003
+    100334: Group#58
+    100336: Group#58.001
+    100338: Group#6
+    100340: Group#6.001
+    100342: Group#60
+    100344: Group#60.001
+    100346: Group#67
+    100348: Group#67.001
+    100350: Group#68
+    100352: Group#7.002
+    100354: Group#7.003
+    100356: Group#7.004
+    100358: Group#7.005
+    100360: Group#7.006
+    100362: Group#7.007
+    100364: Group#70
+    100366: Group#70.001
+    100368: Group#85
+    100370: Group#85.001
+    100372: Group#87
+    100374: Group#87.001
+    100376: Group#89
+    100378: Group#89.001
+    100380: Group#96
+    100382: Group#96.001
+    100384: Group#96.002
+    100386: Group#96.003
+    100388: Lamp
+    100390: Rail Ties
+    100392: Rail Ties.001
+    100394: Rail Ties.002
+    100396: Rail Ties.003
+    100398: Rail Ties.004
+    100400: Rail Ties.005
+    100402: Rail Ties.006
+    100404: Rail Ties.007
+    100406: Rail Ties.008
+    100408: Rail Ties.009
+    100410: Rail Ties.010
+    100412: Rail Ties.011
+    100414: Rail Ties.012
+    100416: Rail Ties.013
+    100418: Rail Ties.014
+    100420: Rail Ties.015
+    100422: Rail Ties.016
+    100424: Rail Ties.017
+    100426: Rail Ties.018
+    100428: Rail Ties.019
+    100430: Rail Ties.020
+    100432: Rail Ties.021
+    100434: Rail Ties.022
+    100436: Rail Ties.023
+    100438: Rail Ties.024
+    100440: Rail Ties.025
+    100442: Rail Ties.026
+    100444: Rail Ties.027
+    100446: Rail Ties.028
+    100448: Rail Ties.029
+    100450: Rail Ties.030
+    100452: Rail Ties.031
+    100454: Rail Ties.032
+    100456: Rail Ties.033
+    100458: Rail Ties.034
+    100460: Rail Ties.035
+    100462: Rail Ties.036
+    100464: Rail Ties.037
+    100466: Rail Ties.038
+    100468: Rail Ties.039
+    100470: Rail Ties.040
+    100472: Rail Ties.041
+    100474: Rail Ties.042
+    100476: Rail Ties.043
+    100478: Rail Ties.044
+    100480: Rail Ties.045
+    100482: Rail Ties.046
+    100484: Rail Ties.047
+    100486: Rail Ties.048
+    100488: Rail Ties.049
+    100490: Rail Ties.050
+    100492: Rail Ties.051
+    100494: Rail Ties.052
+    100496: Rail Ties.053
+    100498: Rail Ties.054
+    100500: Rail Ties.055
+    100502: Rail Ties.056
+    100504: window-left
+    100506: window-right
+    400000: Active Camera
+    400002: //RootNode
+    400004: Camera
+    400006: door-frame
+    400008: door-left
+    400010: door-right
+    400012: G-
+    400014: G-.001
+    400016: G-.002
+    400018: G-.003
+    400020: G-.004
+    400022: G-.005
+    400024: G-.006
+    400026: G-.007
+    400028: G-.008
+    400030: G-.009
+    400032: G-.010
+    400034: G-.011
+    400036: G-.012
+    400038: G-.013
+    400040: G-.014
+    400042: G-.015
+    400044: Group#10
+    400046: Group#10.001
+    400048: Group#15
+    400050: Group#15.001
+    400052: Group#15.002
+    400054: Group#15.003
+    400056: Group#15.004
+    400058: Group#15.005
+    400060: Group#15.006
+    400062: Group#15.007
+    400064: Group#16
+    400066: Group#16.001
+    400068: Group#17
+    400070: Group#17.001
+    400072: Group#19
+    400074: Group#19.001
+    400076: Group#2
+    400078: Group#20
+    400080: Group#20.001
+    400082: Group#20.002
+    400084: Group#20.003
+    400086: Group#20.004
+    400088: Group#20.005
+    400090: Group#20.006
+    400092: Group#20.007
+    400094: Group#20.008
+    400096: Group#20.009
+    400098: Group#20.010
+    400100: Group#20.011
+    400102: Group#20.012
+    400104: Group#20.013
+    400106: Group#21
+    400108: Group#21.001
+    400110: Group#21.002
+    400112: Group#21.003
+    400114: Group#21.004
+    400116: Group#21.005
+    400118: Group#22
+    400120: Group#22.001
+    400122: Group#22.002
+    400124: Group#22.003
+    400126: Group#22.004
+    400128: Group#22.005
+    400130: Group#22.006
+    400132: Group#22.007
+    400134: Group#23
+    400136: Group#23.001
+    400138: Group#24
+    400140: Group#24.001
+    400142: Group#24.002
+    400144: Group#24.003
+    400146: Group#25
+    400148: Group#26
+    400150: Group#26.001
+    400152: Group#27
+    400154: Group#27.001
+    400156: Group#27.002
+    400158: Group#27.003
+    400160: Group#27.004
+    400162: Group#28
+    400164: Group#28.001
+    400166: Group#28.002
+    400168: Group#28.003
+    400170: Group#28.004
+    400172: Group#28.005
+    400174: Group#28.006
+    400176: Group#28.007
+    400178: Group#28.008
+    400180: Group#28.009
+    400182: Group#32
+    400184: Group#32.001
+    400186: Group#34
+    400188: Group#34.001
+    400190: Group#34.002
+    400192: Group#34.003
+    400194: Group#34.004
+    400196: Group#34.005
+    400198: Group#34.006
+    400200: Group#34.007
+    400202: Group#35
+    400204: Group#35.001
+    400206: Group#35.002
+    400208: Group#35.003
+    400210: Group#36
+    400212: Group#36.001
+    400214: Group#36.002
+    400216: Group#36.003
+    400218: Group#37
+    400220: Group#37.001
+    400222: Group#37.002
+    400224: Group#37.003
+    400226: Group#38
+    400228: Group#38.001
+    400230: Group#39
+    400232: Group#39.001
+    400234: Group#4
+    400236: Group#4.001
+    400238: Group#40
+    400240: Group#40.001
+    400242: Group#40.002
+    400244: Group#40.003
+    400246: Group#43
+    400248: Group#45
+    400250: Group#45.001
+    400252: Group#45.002
+    400254: Group#45.003
+    400256: Group#46
+    400258: Group#46.001
+    400260: Group#46.002
+    400262: Group#46.003
+    400264: Group#48
+    400266: Group#48.001
+    400268: Group#48.002
+    400270: Group#48.003
+    400272: Group#48.004
+    400274: Group#48.005
+    400276: Group#48.006
+    400278: Group#48.007
+    400280: Group#49
+    400282: Group#50
+    400284: Group#50.001
+    400286: Group#50.002
+    400288: Group#50.003
+    400290: Group#50.004
+    400292: Group#50.005
+    400294: Group#50.006
+    400296: Group#50.007
+    400298: Group#50.008
+    400300: Group#50.009
+    400302: Group#50.010
+    400304: Group#50.011
+    400306: Group#50.012
+    400308: Group#50.013
+    400310: Group#50.014
+    400312: Group#50.015
+    400314: Group#50.016
+    400316: Group#50.017
+    400318: Group#56
+    400320: Group#56.001
+    400322: Group#56.002
+    400324: Group#56.003
+    400326: Group#57
+    400328: Group#57.001
+    400330: Group#57.002
+    400332: Group#57.003
+    400334: Group#58
+    400336: Group#58.001
+    400338: Group#6
+    400340: Group#6.001
+    400342: Group#60
+    400344: Group#60.001
+    400346: Group#67
+    400348: Group#67.001
+    400350: Group#68
+    400352: Group#7.002
+    400354: Group#7.003
+    400356: Group#7.004
+    400358: Group#7.005
+    400360: Group#7.006
+    400362: Group#7.007
+    400364: Group#70
+    400366: Group#70.001
+    400368: Group#85
+    400370: Group#85.001
+    400372: Group#87
+    400374: Group#87.001
+    400376: Group#89
+    400378: Group#89.001
+    400380: Group#96
+    400382: Group#96.001
+    400384: Group#96.002
+    400386: Group#96.003
+    400388: Lamp
+    400390: Rail Ties
+    400392: Rail Ties.001
+    400394: Rail Ties.002
+    400396: Rail Ties.003
+    400398: Rail Ties.004
+    400400: Rail Ties.005
+    400402: Rail Ties.006
+    400404: Rail Ties.007
+    400406: Rail Ties.008
+    400408: Rail Ties.009
+    400410: Rail Ties.010
+    400412: Rail Ties.011
+    400414: Rail Ties.012
+    400416: Rail Ties.013
+    400418: Rail Ties.014
+    400420: Rail Ties.015
+    400422: Rail Ties.016
+    400424: Rail Ties.017
+    400426: Rail Ties.018
+    400428: Rail Ties.019
+    400430: Rail Ties.020
+    400432: Rail Ties.021
+    400434: Rail Ties.022
+    400436: Rail Ties.023
+    400438: Rail Ties.024
+    400440: Rail Ties.025
+    400442: Rail Ties.026
+    400444: Rail Ties.027
+    400446: Rail Ties.028
+    400448: Rail Ties.029
+    400450: Rail Ties.030
+    400452: Rail Ties.031
+    400454: Rail Ties.032
+    400456: Rail Ties.033
+    400458: Rail Ties.034
+    400460: Rail Ties.035
+    400462: Rail Ties.036
+    400464: Rail Ties.037
+    400466: Rail Ties.038
+    400468: Rail Ties.039
+    400470: Rail Ties.040
+    400472: Rail Ties.041
+    400474: Rail Ties.042
+    400476: Rail Ties.043
+    400478: Rail Ties.044
+    400480: Rail Ties.045
+    400482: Rail Ties.046
+    400484: Rail Ties.047
+    400486: Rail Ties.048
+    400488: Rail Ties.049
+    400490: Rail Ties.050
+    400492: Rail Ties.051
+    400494: Rail Ties.052
+    400496: Rail Ties.053
+    400498: Rail Ties.054
+    400500: Rail Ties.055
+    400502: Rail Ties.056
+    400504: window-left
+    400506: window-right
+    2300000: door-frame
+    2300002: door-left
+    2300004: door-right
+    2300006: G-
+    2300008: G-.001
+    2300010: G-.002
+    2300012: G-.003
+    2300014: G-.004
+    2300016: G-.005
+    2300018: G-.006
+    2300020: G-.007
+    2300022: G-.008
+    2300024: G-.009
+    2300026: G-.010
+    2300028: G-.011
+    2300030: G-.012
+    2300032: G-.013
+    2300034: G-.014
+    2300036: G-.015
+    2300038: Group#10
+    2300040: Group#10.001
+    2300042: Group#15
+    2300044: Group#15.001
+    2300046: Group#15.002
+    2300048: Group#15.003
+    2300050: Group#15.004
+    2300052: Group#15.005
+    2300054: Group#15.006
+    2300056: Group#15.007
+    2300058: Group#16
+    2300060: Group#16.001
+    2300062: Group#17
+    2300064: Group#17.001
+    2300066: Group#19
+    2300068: Group#19.001
+    2300070: Group#2
+    2300072: Group#20
+    2300074: Group#20.001
+    2300076: Group#20.002
+    2300078: Group#20.003
+    2300080: Group#20.004
+    2300082: Group#20.005
+    2300084: Group#20.006
+    2300086: Group#20.007
+    2300088: Group#20.008
+    2300090: Group#20.009
+    2300092: Group#20.010
+    2300094: Group#20.011
+    2300096: Group#20.012
+    2300098: Group#20.013
+    2300100: Group#21
+    2300102: Group#21.001
+    2300104: Group#21.002
+    2300106: Group#21.003
+    2300108: Group#21.004
+    2300110: Group#21.005
+    2300112: Group#22
+    2300114: Group#22.001
+    2300116: Group#22.002
+    2300118: Group#22.003
+    2300120: Group#22.004
+    2300122: Group#22.005
+    2300124: Group#22.006
+    2300126: Group#22.007
+    2300128: Group#23
+    2300130: Group#23.001
+    2300132: Group#24
+    2300134: Group#24.001
+    2300136: Group#24.002
+    2300138: Group#24.003
+    2300140: Group#25
+    2300142: Group#26
+    2300144: Group#26.001
+    2300146: Group#27
+    2300148: Group#27.001
+    2300150: Group#27.002
+    2300152: Group#27.003
+    2300154: Group#27.004
+    2300156: Group#28
+    2300158: Group#28.001
+    2300160: Group#28.002
+    2300162: Group#28.003
+    2300164: Group#28.004
+    2300166: Group#28.005
+    2300168: Group#28.006
+    2300170: Group#28.007
+    2300172: Group#28.008
+    2300174: Group#28.009
+    2300176: Group#32
+    2300178: Group#32.001
+    2300180: Group#34
+    2300182: Group#34.001
+    2300184: Group#34.002
+    2300186: Group#34.003
+    2300188: Group#34.004
+    2300190: Group#34.005
+    2300192: Group#34.006
+    2300194: Group#34.007
+    2300196: Group#35
+    2300198: Group#35.001
+    2300200: Group#35.002
+    2300202: Group#35.003
+    2300204: Group#36
+    2300206: Group#36.001
+    2300208: Group#36.002
+    2300210: Group#36.003
+    2300212: Group#37
+    2300214: Group#37.001
+    2300216: Group#37.002
+    2300218: Group#37.003
+    2300220: Group#38
+    2300222: Group#38.001
+    2300224: Group#39
+    2300226: Group#39.001
+    2300228: Group#4
+    2300230: Group#4.001
+    2300232: Group#40
+    2300234: Group#40.001
+    2300236: Group#40.002
+    2300238: Group#40.003
+    2300240: Group#43
+    2300242: Group#45
+    2300244: Group#45.001
+    2300246: Group#45.002
+    2300248: Group#45.003
+    2300250: Group#46
+    2300252: Group#46.001
+    2300254: Group#46.002
+    2300256: Group#46.003
+    2300258: Group#48
+    2300260: Group#48.001
+    2300262: Group#48.002
+    2300264: Group#48.003
+    2300266: Group#48.004
+    2300268: Group#48.005
+    2300270: Group#48.006
+    2300272: Group#48.007
+    2300274: Group#49
+    2300276: Group#50
+    2300278: Group#50.001
+    2300280: Group#50.002
+    2300282: Group#50.003
+    2300284: Group#50.004
+    2300286: Group#50.005
+    2300288: Group#50.006
+    2300290: Group#50.007
+    2300292: Group#50.008
+    2300294: Group#50.009
+    2300296: Group#50.010
+    2300298: Group#50.011
+    2300300: Group#50.012
+    2300302: Group#50.013
+    2300304: Group#50.014
+    2300306: Group#50.015
+    2300308: Group#50.016
+    2300310: Group#50.017
+    2300312: Group#56
+    2300314: Group#56.001
+    2300316: Group#56.002
+    2300318: Group#56.003
+    2300320: Group#57
+    2300322: Group#57.001
+    2300324: Group#57.002
+    2300326: Group#57.003
+    2300328: Group#58
+    2300330: Group#58.001
+    2300332: Group#6
+    2300334: Group#6.001
+    2300336: Group#60
+    2300338: Group#60.001
+    2300340: Group#67
+    2300342: Group#67.001
+    2300344: Group#68
+    2300346: Group#7.002
+    2300348: Group#7.003
+    2300350: Group#7.004
+    2300352: Group#7.005
+    2300354: Group#7.006
+    2300356: Group#7.007
+    2300358: Group#70
+    2300360: Group#70.001
+    2300362: Group#85
+    2300364: Group#85.001
+    2300366: Group#87
+    2300368: Group#87.001
+    2300370: Group#89
+    2300372: Group#89.001
+    2300374: Group#96
+    2300376: Group#96.001
+    2300378: Group#96.002
+    2300380: Group#96.003
+    2300382: Rail Ties
+    2300384: Rail Ties.001
+    2300386: Rail Ties.002
+    2300388: Rail Ties.003
+    2300390: Rail Ties.004
+    2300392: Rail Ties.005
+    2300394: Rail Ties.006
+    2300396: Rail Ties.007
+    2300398: Rail Ties.008
+    2300400: Rail Ties.009
+    2300402: Rail Ties.010
+    2300404: Rail Ties.011
+    2300406: Rail Ties.012
+    2300408: Rail Ties.013
+    2300410: Rail Ties.014
+    2300412: Rail Ties.015
+    2300414: Rail Ties.016
+    2300416: Rail Ties.017
+    2300418: Rail Ties.018
+    2300420: Rail Ties.019
+    2300422: Rail Ties.020
+    2300424: Rail Ties.021
+    2300426: Rail Ties.022
+    2300428: Rail Ties.023
+    2300430: Rail Ties.024
+    2300432: Rail Ties.025
+    2300434: Rail Ties.026
+    2300436: Rail Ties.027
+    2300438: Rail Ties.028
+    2300440: Rail Ties.029
+    2300442: Rail Ties.030
+    2300444: Rail Ties.031
+    2300446: Rail Ties.032
+    2300448: Rail Ties.033
+    2300450: Rail Ties.034
+    2300452: Rail Ties.035
+    2300454: Rail Ties.036
+    2300456: Rail Ties.037
+    2300458: Rail Ties.038
+    2300460: Rail Ties.039
+    2300462: Rail Ties.040
+    2300464: Rail Ties.041
+    2300466: Rail Ties.042
+    2300468: Rail Ties.043
+    2300470: Rail Ties.044
+    2300472: Rail Ties.045
+    2300474: Rail Ties.046
+    2300476: Rail Ties.047
+    2300478: Rail Ties.048
+    2300480: Rail Ties.049
+    2300482: Rail Ties.050
+    2300484: Rail Ties.051
+    2300486: Rail Ties.052
+    2300488: Rail Ties.053
+    2300490: Rail Ties.054
+    2300492: Rail Ties.055
+    2300494: Rail Ties.056
+    2300496: window-left
+    2300498: window-right
+    3300000: door-frame
+    3300002: door-left
+    3300004: door-right
+    3300006: G-
+    3300008: G-.001
+    3300010: G-.002
+    3300012: G-.003
+    3300014: G-.004
+    3300016: G-.005
+    3300018: G-.006
+    3300020: G-.007
+    3300022: G-.008
+    3300024: G-.009
+    3300026: G-.010
+    3300028: G-.011
+    3300030: G-.012
+    3300032: G-.013
+    3300034: G-.014
+    3300036: G-.015
+    3300038: Group#10
+    3300040: Group#10.001
+    3300042: Group#15
+    3300044: Group#15.001
+    3300046: Group#15.002
+    3300048: Group#15.003
+    3300050: Group#15.004
+    3300052: Group#15.005
+    3300054: Group#15.006
+    3300056: Group#15.007
+    3300058: Group#16
+    3300060: Group#16.001
+    3300062: Group#17
+    3300064: Group#17.001
+    3300066: Group#19
+    3300068: Group#19.001
+    3300070: Group#2
+    3300072: Group#20
+    3300074: Group#20.001
+    3300076: Group#20.002
+    3300078: Group#20.003
+    3300080: Group#20.004
+    3300082: Group#20.005
+    3300084: Group#20.006
+    3300086: Group#20.007
+    3300088: Group#20.008
+    3300090: Group#20.009
+    3300092: Group#20.010
+    3300094: Group#20.011
+    3300096: Group#20.012
+    3300098: Group#20.013
+    3300100: Group#21
+    3300102: Group#21.001
+    3300104: Group#21.002
+    3300106: Group#21.003
+    3300108: Group#21.004
+    3300110: Group#21.005
+    3300112: Group#22
+    3300114: Group#22.001
+    3300116: Group#22.002
+    3300118: Group#22.003
+    3300120: Group#22.004
+    3300122: Group#22.005
+    3300124: Group#22.006
+    3300126: Group#22.007
+    3300128: Group#23
+    3300130: Group#23.001
+    3300132: Group#24
+    3300134: Group#24.001
+    3300136: Group#24.002
+    3300138: Group#24.003
+    3300140: Group#25
+    3300142: Group#26
+    3300144: Group#26.001
+    3300146: Group#27
+    3300148: Group#27.001
+    3300150: Group#27.002
+    3300152: Group#27.003
+    3300154: Group#27.004
+    3300156: Group#28
+    3300158: Group#28.001
+    3300160: Group#28.002
+    3300162: Group#28.003
+    3300164: Group#28.004
+    3300166: Group#28.005
+    3300168: Group#28.006
+    3300170: Group#28.007
+    3300172: Group#28.008
+    3300174: Group#28.009
+    3300176: Group#32
+    3300178: Group#32.001
+    3300180: Group#34
+    3300182: Group#34.001
+    3300184: Group#34.002
+    3300186: Group#34.003
+    3300188: Group#34.004
+    3300190: Group#34.005
+    3300192: Group#34.006
+    3300194: Group#34.007
+    3300196: Group#35
+    3300198: Group#35.001
+    3300200: Group#35.002
+    3300202: Group#35.003
+    3300204: Group#36
+    3300206: Group#36.001
+    3300208: Group#36.002
+    3300210: Group#36.003
+    3300212: Group#37
+    3300214: Group#37.001
+    3300216: Group#37.002
+    3300218: Group#37.003
+    3300220: Group#38
+    3300222: Group#38.001
+    3300224: Group#39
+    3300226: Group#39.001
+    3300228: Group#4
+    3300230: Group#4.001
+    3300232: Group#40
+    3300234: Group#40.001
+    3300236: Group#40.002
+    3300238: Group#40.003
+    3300240: Group#43
+    3300242: Group#45
+    3300244: Group#45.001
+    3300246: Group#45.002
+    3300248: Group#45.003
+    3300250: Group#46
+    3300252: Group#46.001
+    3300254: Group#46.002
+    3300256: Group#46.003
+    3300258: Group#48
+    3300260: Group#48.001
+    3300262: Group#48.002
+    3300264: Group#48.003
+    3300266: Group#48.004
+    3300268: Group#48.005
+    3300270: Group#48.006
+    3300272: Group#48.007
+    3300274: Group#49
+    3300276: Group#50
+    3300278: Group#50.001
+    3300280: Group#50.002
+    3300282: Group#50.003
+    3300284: Group#50.004
+    3300286: Group#50.005
+    3300288: Group#50.006
+    3300290: Group#50.007
+    3300292: Group#50.008
+    3300294: Group#50.009
+    3300296: Group#50.010
+    3300298: Group#50.011
+    3300300: Group#50.012
+    3300302: Group#50.013
+    3300304: Group#50.014
+    3300306: Group#50.015
+    3300308: Group#50.016
+    3300310: Group#50.017
+    3300312: Group#56
+    3300314: Group#56.001
+    3300316: Group#56.002
+    3300318: Group#56.003
+    3300320: Group#57
+    3300322: Group#57.001
+    3300324: Group#57.002
+    3300326: Group#57.003
+    3300328: Group#58
+    3300330: Group#58.001
+    3300332: Group#6
+    3300334: Group#6.001
+    3300336: Group#60
+    3300338: Group#60.001
+    3300340: Group#67
+    3300342: Group#67.001
+    3300344: Group#68
+    3300346: Group#7.002
+    3300348: Group#7.003
+    3300350: Group#7.004
+    3300352: Group#7.005
+    3300354: Group#7.006
+    3300356: Group#7.007
+    3300358: Group#70
+    3300360: Group#70.001
+    3300362: Group#85
+    3300364: Group#85.001
+    3300366: Group#87
+    3300368: Group#87.001
+    3300370: Group#89
+    3300372: Group#89.001
+    3300374: Group#96
+    3300376: Group#96.001
+    3300378: Group#96.002
+    3300380: Group#96.003
+    3300382: Rail Ties
+    3300384: Rail Ties.001
+    3300386: Rail Ties.002
+    3300388: Rail Ties.003
+    3300390: Rail Ties.004
+    3300392: Rail Ties.005
+    3300394: Rail Ties.006
+    3300396: Rail Ties.007
+    3300398: Rail Ties.008
+    3300400: Rail Ties.009
+    3300402: Rail Ties.010
+    3300404: Rail Ties.011
+    3300406: Rail Ties.012
+    3300408: Rail Ties.013
+    3300410: Rail Ties.014
+    3300412: Rail Ties.015
+    3300414: Rail Ties.016
+    3300416: Rail Ties.017
+    3300418: Rail Ties.018
+    3300420: Rail Ties.019
+    3300422: Rail Ties.020
+    3300424: Rail Ties.021
+    3300426: Rail Ties.022
+    3300428: Rail Ties.023
+    3300430: Rail Ties.024
+    3300432: Rail Ties.025
+    3300434: Rail Ties.026
+    3300436: Rail Ties.027
+    3300438: Rail Ties.028
+    3300440: Rail Ties.029
+    3300442: Rail Ties.030
+    3300444: Rail Ties.031
+    3300446: Rail Ties.032
+    3300448: Rail Ties.033
+    3300450: Rail Ties.034
+    3300452: Rail Ties.035
+    3300454: Rail Ties.036
+    3300456: Rail Ties.037
+    3300458: Rail Ties.038
+    3300460: Rail Ties.039
+    3300462: Rail Ties.040
+    3300464: Rail Ties.041
+    3300466: Rail Ties.042
+    3300468: Rail Ties.043
+    3300470: Rail Ties.044
+    3300472: Rail Ties.045
+    3300474: Rail Ties.046
+    3300476: Rail Ties.047
+    3300478: Rail Ties.048
+    3300480: Rail Ties.049
+    3300482: Rail Ties.050
+    3300484: Rail Ties.051
+    3300486: Rail Ties.052
+    3300488: Rail Ties.053
+    3300490: Rail Ties.054
+    3300492: Rail Ties.055
+    3300494: Rail Ties.056
+    3300496: window-left
+    3300498: window-right
+    4300000: door-right
+    4300002: door-left
+    4300004: door-frame
+    4300006: Group#49
+    4300008: Group#32.001
+    4300010: Group#96.003
+    4300012: Group#10.001
+    4300014: Group#2
+    4300016: G-.015
+    4300018: Group#89.001
+    4300020: Group#85.001
+    4300022: Group#17.001
+    4300024: Group#43
+    4300026: Group#27.004
+    4300028: Group#39.001
+    4300030: G-.014
+    4300032: Group#4.001
+    4300034: Group#50.017
+    4300036: Group#20.013
+    4300038: Group#21.005
+    4300040: Group#6.001
+    4300042: Group#7.007
+    4300044: Group#15.007
+    4300046: Group#22.007
+    4300048: Group#15.006
+    4300050: Group#22.006
+    4300052: Group#67.001
+    4300054: Group#70.001
+    4300056: Group#60.001
+    4300058: Group#68
+    4300060: Group#23.001
+    4300062: Group#16.001
+    4300064: Group#45.003
+    4300066: Group#35.003
+    4300068: Group#36.003
+    4300070: Group#37.003
+    4300072: Group#40.003
+    4300074: Group#24.003
+    4300076: Group#58.001
+    4300078: Group#56.003
+    4300080: Group#57.003
+    4300082: Group#34.007
+    4300084: Group#46.003
+    4300086: Group#48.007
+    4300088: G-.013
+    4300090: G-.012
+    4300092: Group#67
+    4300094: Group#19.001
+    4300096: Group#38.001
+    4300098: Group#26.001
+    4300100: Group#25
+    4300102: G-.011
+    4300104: G-.010
+    4300106: Group#28.009
+    4300108: G-.009
+    4300110: G-.008
+    4300112: G-.007
+    4300114: G-.006
+    4300116: G-.005
+    4300118: G-.004
+    4300120: G-.003
+    4300122: G-.002
+    4300124: G-.001
+    4300126: G-
+    4300128: Rail Ties.056
+    4300130: Group#87.001
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
