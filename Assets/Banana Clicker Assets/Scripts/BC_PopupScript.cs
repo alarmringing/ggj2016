@@ -20,7 +20,7 @@ public class BC_PopupScript : MonoBehaviour {
         popupText = GetComponent<Text>();
         
         //set the text component to + with the clickrate.
-        popupText.text = "+ " + clickRate;
+        popupText.text = "+" + clickRate;
 
         //set the parent of the object to the canvas, so that the position of the popus is right.
         transform.SetParent(GameObject.Find("Canvas").transform, false) ;
