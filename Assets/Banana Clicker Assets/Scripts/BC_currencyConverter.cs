@@ -47,15 +47,15 @@ public class BC_currencyConverter : MonoBehaviour {
 
 		} else {
 
-			converted = "" + valueToConvert.ToString("f2");
+			converted = "" + valueToConvert.ToString("f1");
 		}
 
 		if (currencyPerSec == true) {
-			converted = converted + "Bananas/Sec";
+			converted = converted + " per sec";
 		}
 
 		if (currencyPerClick == true) {
-			converted = converted + " Bananas/Click";	
+			converted = converted + " per click";	
 		}
 
 		return converted;

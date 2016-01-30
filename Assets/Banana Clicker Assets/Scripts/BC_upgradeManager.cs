@@ -77,7 +77,7 @@ public class BC_upgradeManager : MonoBehaviour {
         {
 
             //this sets the item name of the item to whatever is written in the inspector plus it adds on the cost and the clickpower from the inspector.
-            itemInfo.text = itemName + " " + count + "\nCost: " + BC_currencyConverter.Instance.GetCurrencyIntoString(cost, false, false) + "\nPower: +" + clickPower;
+	        itemInfo.text = itemName + " " + count + "\nCost: " + BC_currencyConverter.Instance.GetCurrencyIntoString(cost, false, false)/* + "\nPower: +" + clickPower*/;
             _slider.value = (float)(click.bananas / cost * 100);
 
             if (_slider.value >= 100)

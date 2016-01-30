@@ -4,6 +4,7 @@ public class ZoomOnPhone : MonoBehaviour
 {
 	public float RotationThreshold = 40.0f;
     public float RotationMaxThreshold = 120.0f;
+    public float RotateBackThreshold = 15.0f;
 	public float ZoomFOV = 40;
 	
 	public bool IsZoomed { get { return _zoomed; }}
@@ -21,12 +22,12 @@ public class ZoomOnPhone : MonoBehaviour
 	void Update()
 	{
         Vector3 euler = this.transform.localRotation.eulerAngles;
-        if (euler.x >= this.RotationThreshold && euler.x <= this.RotationMaxThreshold)
+        if (!_zoomed && euler.x >= this.RotationThreshold && euler.x <= this.RotationMaxThreshold)
 		{
 			_camera.fieldOfView = this.ZoomFOV;
 			_zoomed = true;
 		}
-		else
+		else if (_zoomed && euler.x <= this.RotateBackThreshold)
 		{
 			_camera.fieldOfView = _normalFOV;
 			_zoomed = false;
