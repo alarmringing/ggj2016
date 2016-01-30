@@ -8,11 +8,28 @@ public class VirtualFriends : MonoBehaviour {
 	public class VirtualFriend
 	{
 		public string name = "Tom";
+		/// <summary>
+		/// When someone first messages you
+		/// </summary>
 		public bool met = false;
+		/// <summary>
+		/// When someone adds you as a friend.
+		/// </summary>
+		public bool friends = false;
+		/// <summary>
+		/// When someone thinks you are awesome.
+		/// </summary>
 		public bool impressed = true;
+		/// <summary>
+		/// When you let someone down.
+		/// </summary>
 		public bool pissed = false;
 		public Texture2D portrait;
 	}
+	
+	public List<VirtualFriend> realFriends;
+	public List<VirtualFriend> gameFriends;
+	
 	
 	[System.Serializable]
 	public class VirtualMessage
@@ -34,31 +51,33 @@ public class VirtualFriends : MonoBehaviour {
 	public List<VirtualMessage> futureMessages;
 	public List<VirtualMessage> inbox;
 	public List<VirtualMessage> oldMessages;
-	public VirtualMessage nextMessage = null;
+	VirtualMessage nextMessage = null;
 	public float nextMessageTime = 1f;
 	
 	public void ReceiveMessages ()
 	{
-		if (Time.time > nextMessageTime)
+		if(nextMessage != null)
 		{
-			VirtualMessage vm = nextMessage;
-			nextMessage.received = true;
-			inbox.Add(nextMessage);
-			futureMessages.Remove(nextMessage);
-			MessageNotification();
-			DetermineNextMessage();
+			if (Time.time > nextMessageTime)
+			{
+				nextMessage.received = true;
+				inbox.Add(nextMessage);
+				futureMessages.Remove(nextMessage);
+				
+				MessageNotification();
+				DetermineNextMessage();
+			}
 		}
-		
-		
 	}
 	
 	public void DetermineNextMessage ()
 	{
+		nextMessage=null;
 		float soonestMessageTime = 0f;
 		VirtualMessage soonestMessage = null;
 		foreach (VirtualMessage vm in futureMessages)
 		{
-			// IF this message is sooner than the soonest previously seen
+			// If this message is sooner than the soonest previously seen
 			if (soonestMessageTime > vm.timeReceived)
 			{
 				soonestMessageTime = vm.timeReceived;
@@ -68,6 +87,7 @@ public class VirtualFriends : MonoBehaviour {
 		if (soonestMessage != null)
 		{
 			nextMessage = soonestMessage;
+			nextMessageTime = soonestMessageTime;
 		}
 	}
 	
@@ -79,16 +99,26 @@ public class VirtualFriends : MonoBehaviour {
 	}
 	
 	
-	public List<VirtualFriend> realFriends;
-	public List<VirtualFriend> gameFriends;
-	
+
 	// Use this for initialization
 	void Start () {
+		nextMessage=null;
 		DetermineNextMessage();
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		ReceiveMessages();
+	}
+	
+	GameObject messagesUICanvas;
+	GameObject messageUICanvas;
+	GameObject gameUICanvas;
+	
+	public void MenubarButton()
+	{
+		messagesUICanvas.SetActive(true);
+		gameUICanvas.SetActive(false);
+		messageUICanvas.SetActive(false);
 	}
 }
