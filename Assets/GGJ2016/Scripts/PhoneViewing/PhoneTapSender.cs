@@ -19,19 +19,14 @@ public class PhoneTapSender : MonoBehaviour
 	public void SendTap(Vector2 relativeOrigin)
     {
         Vector2 cursorPosition = getCursorPositionFromRelativeOrigin(relativeOrigin, false);
-        //Ray ray = new Ray((Vector3)cursorPosition + _camera.transform.position, _camera.transform.forward);
-        //RaycastHit[] hits = Physics.RaycastAll(ray, 5.0f);
-
         PointerEventData pointer = new PointerEventData(EventSystem.current);
         pointer.position = cursorPosition;
-
         List<RaycastResult> results = new List<RaycastResult>();
 
         EventSystem.current.RaycastAll(pointer, results);
 
         foreach (RaycastResult result in results)
         {
-            //Debug.Log("found result: " + result);
             Button button = result.gameObject.GetComponent<Button>();
 
             if (button != null)
@@ -39,8 +34,6 @@ public class PhoneTapSender : MonoBehaviour
                 ExecuteEvents.Execute(button.gameObject, pointer, ExecuteEvents.pointerClickHandler);
             }
         }
-
-        //ExecuteEvents.ExecuteHierarchy(RootUI, pointer, ExecuteEvents.pointerClickHandler);
     }
 
     public void UpdateCursor(Vector2 relativeOrigin)

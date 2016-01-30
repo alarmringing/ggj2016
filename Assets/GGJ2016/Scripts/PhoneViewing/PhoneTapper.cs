@@ -33,7 +33,6 @@ public class PhoneTapper : MonoBehaviour
 
             if (Input.GetMouseButtonDown(0))
             {
-                //Debug.Log("hit" + uvHit);
                 _phoneTapSender.SendTap(uvHit);
             }
 		}
