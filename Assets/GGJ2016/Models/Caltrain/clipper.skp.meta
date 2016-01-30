@@ -1,0 +1,198 @@
+fileFormatVersion: 2
+guid: 60ae223e7c48949aca0819c8dea87ea3
+timeCreated: 1454138303
+licenseType: Free
+SketchUpImporter:
+  generateBackFace: 0
+  mergeCoplanarFaces: 0
+  selectedNodes: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f000000100000001100000012000000130000001400000015000000160000001700000018000000190000001a0000001b0000001c0000001d0000001e0000001f000000200000002100000022000000230000002400000025000000260000002700000028000000290000002a0000002b0000002c0000002d0000002e0000002f000000300000003100000032000000
+  assetHash:
+    serializedVersion: 2
+    Hash: 0b84972675aa61dbbea822b077157b00
+  longitude: -105.283
+  latitude: 40.017
+  northCorrection: -0
+  fileUnit: 0
+  sketchUpImportData:
+    defaultCamera:
+      position: {x: 0.5125944, y: 1.4125781, z: -0.3884627}
+      lookAt: {x: -0.13669854, y: 0.8724609, z: 0.79279727}
+      up: {x: -0.17916402, y: 0.92825353, z: 0.32595345}
+      fov: 30
+      aspectRatio: 0
+      orthoSize: 1
+      isPerspective: 1
+    scenes: []
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Clipper
+    100002: //RootNode
+    100004: Clipper 1
+    100006: Clipper 2
+    100008: Clipper 3
+    100010: Clipper Logo
+    100012: Clipper Logo 1
+    100014: display
+    100016: Group 1
+    100018: Group 49
+    100020: Half_Hood
+    100022: Half_Hood 1
+    100024: Hood
+    100026: Triangle
+    100028: Triangle 1
+    100030: Triangle 10
+    100032: Triangle 11
+    100034: Triangle 12
+    100036: Triangle 13
+    100038: Triangle 14
+    100040: Triangle 15
+    100042: Triangle 2
+    100044: Triangle 3
+    100046: Triangle 4
+    100048: Triangle 5
+    100050: Triangle 6
+    100052: Triangle 7
+    100054: Triangle 8
+    100056: Triangle 9
+    400000: Clipper
+    400002: //RootNode
+    400004: Clipper 1
+    400006: Clipper 2
+    400008: Clipper 3
+    400010: Clipper Logo
+    400012: Clipper Logo 1
+    400014: display
+    400016: Group 1
+    400018: Group 49
+    400020: Half_Hood
+    400022: Half_Hood 1
+    400024: Hood
+    400026: Triangle
+    400028: Triangle 1
+    400030: Triangle 10
+    400032: Triangle 11
+    400034: Triangle 12
+    400036: Triangle 13
+    400038: Triangle 14
+    400040: Triangle 15
+    400042: Triangle 2
+    400044: Triangle 3
+    400046: Triangle 4
+    400048: Triangle 5
+    400050: Triangle 6
+    400052: Triangle 7
+    400054: Triangle 8
+    400056: Triangle 9
+    2300000: Clipper Logo
+    2300002: Clipper Logo 1
+    2300004: display
+    2300006: Group 49
+    2300008: Half_Hood
+    2300010: Half_Hood 1
+    2300012: Triangle
+    2300014: Triangle 1
+    2300016: Triangle 10
+    2300018: Triangle 11
+    2300020: Triangle 12
+    2300022: Triangle 13
+    2300024: Triangle 14
+    2300026: Triangle 15
+    2300028: Triangle 2
+    2300030: Triangle 3
+    2300032: Triangle 4
+    2300034: Triangle 5
+    2300036: Triangle 6
+    2300038: Triangle 7
+    2300040: Triangle 8
+    2300042: Triangle 9
+    3300000: Clipper Logo
+    3300002: Clipper Logo 1
+    3300004: display
+    3300006: Group 49
+    3300008: Half_Hood
+    3300010: Half_Hood 1
+    3300012: Triangle
+    3300014: Triangle 1
+    3300016: Triangle 10
+    3300018: Triangle 11
+    3300020: Triangle 12
+    3300022: Triangle 13
+    3300024: Triangle 14
+    3300026: Triangle 15
+    3300028: Triangle 2
+    3300030: Triangle 3
+    3300032: Triangle 4
+    3300034: Triangle 5
+    3300036: Triangle 6
+    3300038: Triangle 7
+    3300040: Triangle 8
+    3300042: Triangle 9
+    4300000: Mesh display
+    4300002: Mesh Half_Hood
+    4300004: Mesh Clipper Logo
+    4300006: Mesh Triangle
+    4300008: Mesh Group 49
+  materials:
+    importMaterials: 1
+    materialName: 2
+    materialSearch: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.0254
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
