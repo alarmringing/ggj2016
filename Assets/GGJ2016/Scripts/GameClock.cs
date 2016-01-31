@@ -8,7 +8,7 @@ public class GameClock : MonoBehaviour {
 	public System.DateTime timePassedFormatted;
 	public Text clockText;
 	int initialHour = 7;
-	int initialMin = 55;
+	int initialMin = 56;
 	
 	public string dateTimeClockString = "XX:XX PM";
 	// Use this for initialization
@@ -32,7 +32,7 @@ public class GameClock : MonoBehaviour {
 		PlayerPrefs.SetInt("CurrentHour", hrs);
 		PlayerPrefs.SetInt("CurrentMin", mins);
 
-		dateTimeClockString = String.Format("{0:00}:{1:00}", hrs, mins);
+		dateTimeClockString = String.Format("{0:00}:{1:00}:{2:00}", hrs, mins, secs);
 		clockText.text = dateTimeClockString + "AM";
 	}
 }

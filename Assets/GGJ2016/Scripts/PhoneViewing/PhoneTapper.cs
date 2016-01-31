@@ -28,11 +28,12 @@ public class PhoneTapper : MonoBehaviour
 
             _phoneScreenCollider.Raycast(ray, out hit, 3.0f);
             Vector2 uvHit = hit.textureCoord;
-
+            
             _phoneTapSender.UpdateCursor(uvHit);
 
             if (Input.GetMouseButtonDown(0))
             {
+                //Debug.Log("uv tapped: " + uvHit.x + ", " + uvHit.y);
                 _phoneTapSender.SendTap(uvHit);
             }
 		}
