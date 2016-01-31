@@ -8,6 +8,7 @@ public class BC_PopupScript : MonoBehaviour {
     public float popupScrollSpeed = 10f;
     public UnityEngine.UI.Text popupText;
     public Transform _canvas;
+    public string ClickName;
 
 
     //this is the first function to run when the app gets started.
@@ -15,7 +16,7 @@ public class BC_PopupScript : MonoBehaviour {
     {
 
         //find object called click and get a reference to the script it contains called "BC_Click"
-        clickRate = GameObject.Find("Click").GetComponent<BC_Click>().bananasPerClick;
+        clickRate = GameObject.Find(this.ClickName).GetComponent<BC_Click>().bananasPerClick;
         //get reference to the text componet on this object
         popupText = GetComponent<Text>();
         

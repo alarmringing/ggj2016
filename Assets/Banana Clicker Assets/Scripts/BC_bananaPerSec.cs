@@ -319,8 +319,7 @@ public class BC_bananaPerSec : MonoBehaviour {
 		//this hides the text and button
 		revenueHolder.SetActive (false);
 		revenueButton.SetActive (false);
-		revenuePanel.SetActive (false);
-
+        revenuePanel.SetActive(false);
 	}
 
 
@@ -329,7 +328,7 @@ public class BC_bananaPerSec : MonoBehaviour {
 
 	//you can call on application pause for that or just set the app to never pause and to exit on pause.
 	//this should be under build options for IOS
-	void OnApplicationQuit() {
+	/*void OnApplicationQuit() {
 
 
         Debug.Log("SaveGame OnApplicationQuit");
@@ -337,17 +336,17 @@ public class BC_bananaPerSec : MonoBehaviour {
 		
 		
 		
-	}
+	}*/
 
     //this function runs when the app is minimized on an android.
     //the debug are here so u know when they run.
-    void OnApplicationPause()
+    /*void OnApplicationPause()
     {
         Debug.Log("SaveGame OnApplicationPause");
 
         Application.Quit();
         //saveGame();
-    }
+    }*/
 
 
 }
