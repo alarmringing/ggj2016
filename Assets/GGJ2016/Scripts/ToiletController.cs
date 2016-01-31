@@ -8,7 +8,7 @@ public class ToiletController : Seating{
 	AudioSource soundToPlay;
 
 	float startTime;
-	float useToiletTime = 30.0f;
+	float useToiletTime = 20.0f;
 
 	void Awake()
 	{
@@ -24,6 +24,7 @@ public class ToiletController : Seating{
 		Debug.Log("Sit");
 
 		soundToPlay.clip = peeing;
+		soundToPlay.Play();
 		soundToPlay.Play();
 		Sit();		
 	}

@@ -55,7 +55,7 @@ public class CarController : MonoBehaviour {
 		GetComponent<AudioSource>().Play();
 	
 		player.SendMessage("ReduceWalkingSpeed", 0.6); //cripple walking 
-		UIPanel.BroadcastMessage("Damaged", 1); //flash screen	
+		UIPanel.BroadcastMessage("Damaged", 2); //flash screen	
 
 		//fling player!!!!!!
 		float thrust = 100f;
@@ -65,8 +65,6 @@ public class CarController : MonoBehaviour {
 		player.GetComponent<Rigidbody>().useGravity = true;
 
 		//yield return new WaitForSeconds(0.2f); 
-
-
 		//player.GetComponent<CharacterController>().enabled = true;
 
 	}
