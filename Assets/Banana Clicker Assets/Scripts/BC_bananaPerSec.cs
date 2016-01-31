@@ -42,10 +42,10 @@ public class BC_bananaPerSec : MonoBehaviour {
 	void Start(){
        
 
-		if (PlayerPrefs.GetFloat ("BananaCount") > 0) {
+		/*if (PlayerPrefs.GetFloat ("BananaCount") > 0) {
 			loadGame ();
 
-		}
+		}*/
 
 
 
