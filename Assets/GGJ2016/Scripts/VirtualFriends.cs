@@ -54,6 +54,7 @@ public class VirtualFriends : MonoBehaviour {
 		public float timeLimitForHelp = 30f;
         public string successResponse = "";
         public string failureResponse = "";
+        public VirtualMessage parentMessage = null;
 	}
 	
 	public List<VirtualMessage> futureMessages;
@@ -142,8 +143,14 @@ public class VirtualFriends : MonoBehaviour {
             failureMessage.successResponse = nextMessage.successResponse;
             failureMessage.triggerTargetName = "PhoneGameManager";
             failureMessage.triggerTargetMethod = "Attack";
+            failureMessage.parentMessage = nextMessage;
 
             InsertMessage(failureMessage);
+        }
+
+        if (nextMessage.parentMessage != null)
+        {
+            this.inbox.Remove(nextMessage.parentMessage);
         }
 		
         if (this.buttonGridLayoutGroup.IsActive())
@@ -245,7 +252,16 @@ public class VirtualFriends : MonoBehaviour {
     public void SuccessfulMessageReply(VirtualMessage message)
     {
         inbox.Remove(message);
-        //TODO - Add response message to list of upcoming messages
+
+        foreach (VirtualMessage futureMessage in futureMessages)
+        {
+            if (futureMessage.parentMessage == message)
+            {
+                futureMessage.messageSubject = "Success!";
+                futureMessage.messageText = message.successResponse;
+                break;
+            }
+        }
     }
 
     private VirtualFriend friendForName(string friendName)

@@ -28,7 +28,11 @@ public class MessageDisplayHandler : MonoBehaviour
     {
         if (this.Message.requestForHelp)
         {
-            if (this.Click.bananas >= this.Message.powerNeededToHelp)
+            if (Time.time >= this.Message.timeReceived + this.Message.timeLimitForHelp)
+            {
+                this.ScreenStateToggler.ViewInbox();
+            }
+            else if (this.Click.bananas >= this.Message.powerNeededToHelp)
             {
                 this.Click.bananas -= this.Message.powerNeededToHelp;
                 this.ReplyCallback(this.Message);
