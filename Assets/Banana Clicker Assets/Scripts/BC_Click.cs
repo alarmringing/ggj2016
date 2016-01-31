@@ -42,6 +42,11 @@ public class BC_Click : MonoBehaviour {
 
 	}
 
+    public void Attack()
+    {
+        this.bananas /= 2.0f;
+    }
+
 	//pretty simply when you click this happens and adds the bananas perclick to your total.
 	public void Clicked()
 	{

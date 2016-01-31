@@ -41,7 +41,8 @@ public class VirtualFriends : MonoBehaviour {
 		public bool helped = false;
 		public string VirtualFriendName = "Tom";
 		public string messageSubject = "Hi";
-		public string messageText = "Hi there.";
+        [TextArea(3, 10)]
+        public string messageText = "Hi there.";
 		public bool requestForHelp = false;
 		public int powerNeededToHelp = 100;
 		
@@ -51,6 +52,8 @@ public class VirtualFriends : MonoBehaviour {
 		/// The time when the message will be received.
 		/// </summary>
 		public float timeLimitForHelp = 30f;
+        public string successResponse = "";
+        public string failureResponse = "";
 	}
 	
 	public List<VirtualMessage> futureMessages;
@@ -82,7 +85,7 @@ public class VirtualFriends : MonoBehaviour {
 		VirtualMessage soonestMessage = null;
 		if ( futureMessages!=null && futureMessages.Count>0)
 		{
-		nextMessage = futureMessages[0];
+		    nextMessage = futureMessages[0];
 			nextMessageTime = nextMessage.timeReceived;
 		}
 		/*
@@ -103,6 +106,17 @@ public class VirtualFriends : MonoBehaviour {
 		}
 		*/
 	}
+
+    public void InsertMessage(VirtualMessage message)
+    {
+        int i = 0;
+        for (; i < this.futureMessages.Count; ++i)
+        {
+            if (futureMessages[i].timeReceived > message.timeReceived)
+                break;
+        }
+        futureMessages.Insert(i, message);
+    }
 	
 	public AudioClip messageReceivedClip;
 	
@@ -117,6 +131,20 @@ public class VirtualFriends : MonoBehaviour {
 		gameObject.GetComponent<AudioSource>().PlayOneShot(messageReceivedClip);
 		unreadMessages++;
 		unreadMessagesText.text = unreadMessages+"";
+
+        if (nextMessage.requestForHelp)
+        {
+            VirtualMessage failureMessage = new VirtualMessage();
+            failureMessage.timeReceived = nextMessage.timeReceived + nextMessage.timeLimitForHelp;
+            failureMessage.VirtualFriendName = nextMessage.VirtualFriendName;
+            failureMessage.messageSubject = "Defenses failed!";
+            failureMessage.messageText = nextMessage.failureResponse;
+            failureMessage.successResponse = nextMessage.successResponse;
+            failureMessage.triggerTargetName = "PhoneGameManager";
+            failureMessage.triggerTargetMethod = "Attack";
+
+            InsertMessage(failureMessage);
+        }
 		
         if (this.buttonGridLayoutGroup.IsActive())
 		{
@@ -194,7 +222,7 @@ public class VirtualFriends : MonoBehaviour {
 			subjectText.text = displayedMessage.messageSubject;
 			bodyText.text = displayedMessage.messageText;
             VirtualFriend friend = friendForName(displayedMessage.VirtualFriendName);
-            portraitImage.texture = friend != null ? friend.portrait : this.defaultPortrait;
+            portraitImage.texture = friend != null && friend.portrait != null ? friend.portrait : this.defaultPortrait;
 			
 			if (!displayedMessage.read)
 			{
