@@ -18,25 +18,19 @@ public class GameClock : MonoBehaviour {
 	void Update () {
 
 		float timePassed = Time.time - PlayerPrefs.GetFloat("GameBeginTime");
-		//Debug.Log("Now time passed is" + timePassed);
-		//timePassedFormatted = new System.DateTime((long)timePassed);
-		///string dateTimeClockString = (int)(timePassed / 60) + ":" + (int)(timePassed % 60);
-		int mins = (int)timePassed % 60;
-		int hrs  = (int)(timePassed / 60) + 7;
-		string ampm = "";
+		int mins = (int)timePassed / 60 + 57;
+		int hrs  = (int)(timePassed / 60)/24 + 7;
+		int secs = (int)(timePassed % 60);
 		hrs = hrs - 12*(hrs/12);
-		if((hrs / 12) %2 == 1) 
+		if((mins / (60)) > 0) 
 		{
-			ampm = "PM";
+			hrs = hrs + 1;
+			mins = mins - 60;		
 		}
-		else if ((hrs / 12) %2 == 0)
-		{
-			ampm = "AM";
-		}
-		//string dateTimeClockString = (hrs + 6) + ":" + mins;
+		PlayerPrefs.SetInt("CurrentHour", hrs);
+		PlayerPrefs.SetInt("CurrentMin", mins);
 
 		dateTimeClockString = String.Format("{0:00}:{1:00}", hrs, mins);
-		//dateTimeClockString = timePassedFormatted.ToShortTimeString()/* + " " + dateTime.ToString("tt", System.Globalization.CultureInfo.InvariantCulture)*/;
-		clockText.text = dateTimeClockString + ampm;
+		clockText.text = dateTimeClockString + "AM";
 	}
 }
