@@ -32,6 +32,14 @@ public class Crosshair : MonoBehaviour
 
     private RaycastHit rayHit;
     private bool raycastReturn;
+    private bool isEnabled = true;
+
+    public void Enable(bool enable)
+    {
+        isEnabled = enable;
+        crosshairs.SetActive(enable);
+        interactionText.gameObject.SetActive(enable);
+    }
 
     /// <summary>
     /// Plays a randomized sound clip.
@@ -73,73 +81,75 @@ public class Crosshair : MonoBehaviour
 
     private void Update()
     {
-        
-        // reset cross hairs to normal unless we detect something else
-        SwapCrosshairs(standardCrosshairs);
-
-        raycastReturn = Physics.Raycast(transform.position, transform.forward, out rayHit, Mathf.Infinity);
-        // check non-layer filtered mouseover here - copyableCode etc, change crosshair color
-        if ((raycastReturn))
+        if (isEnabled)
         {
-            ActivateTriggerCrosshair aTrigger = rayHit.transform.gameObject.GetComponent<ActivateTriggerCrosshair>();
-            if ( aTrigger != null )
-            {
-				if(interactCrosshair!=null)
-				{
-                	SwapCrosshairs(interactCrosshair);
-				}
-				else
-				{
-					if(crosshairs!=null)
-					{
-						crosshairs.GetComponent<RawImage>().texture=null;
-					}
-				}
-                targetObject = rayHit.transform.gameObject;
-                triggerMessage = aTrigger.activateOnShootMessage;
-                if (lastTargetObject == null || targetObject != lastTargetObject)
-                {
-                    HoverSound();
-                }
-                lastTargetObject = targetObject;
-            }
-            else
-            {
-                targetObject = null;
-                triggerMessage = "";
-            }
-        }
+            // reset cross hairs to normal unless we detect something else
+            SwapCrosshairs(standardCrosshairs);
 
-        // on mouse press
-        if (Input.GetButtonDown("Fire1"))
-        {
-	        if (debug) Debug.Log("Fire1");
-	        // check cool down
-            if (Time.time > timeLastFired + delayTime)
+            raycastReturn = Physics.Raycast(transform.position, transform.forward, out rayHit, Mathf.Infinity);
+            // check non-layer filtered mouseover here - copyableCode etc, change crosshair color
+            if ((raycastReturn))
             {
-                    
-                if (targetObject != null)
+                ActivateTriggerCrosshair aTrigger = rayHit.transform.gameObject.GetComponent<ActivateTriggerCrosshair>();
+                if (aTrigger != null)
                 {
-	                if (debug) Debug.Log("Shoot");
-	                targetObject.SendMessage("Shoot");
-                    ClickSound();
-                    timeLastFired = Time.time;
-                    targetObject = null;
+                    if (interactCrosshair != null)
+                    {
+                        SwapCrosshairs(interactCrosshair);
+                    }
+                    else
+                    {
+                        if (crosshairs != null)
+                        {
+                            crosshairs.GetComponent<RawImage>().texture = null;
+                        }
+                    }
+                    targetObject = rayHit.transform.gameObject;
+                    triggerMessage = aTrigger.activateOnShootMessage;
+                    if (lastTargetObject == null || targetObject != lastTargetObject)
+                    {
+                        HoverSound();
+                    }
+                    lastTargetObject = targetObject;
                 }
                 else
                 {
-                    ErrorSound();
+                    targetObject = null;
+                    triggerMessage = "";
                 }
             }
-        }
 
-        if (triggerMessage != "")
-        {
-            interactionText.text = triggerMessage;
-        }
-        else
-        {
-            interactionText.text = "";
+            // on mouse press
+            if (Input.GetButtonDown("Fire1"))
+            {
+                if (debug) Debug.Log("Fire1");
+                // check cool down
+                if (Time.time > timeLastFired + delayTime)
+                {
+
+                    if (targetObject != null)
+                    {
+                        if (debug) Debug.Log("Shoot");
+                        targetObject.SendMessage("Shoot");
+                        ClickSound();
+                        timeLastFired = Time.time;
+                        targetObject = null;
+                    }
+                    else
+                    {
+                        ErrorSound();
+                    }
+                }
+            }
+
+            if (triggerMessage != "")
+            {
+                interactionText.text = triggerMessage;
+            }
+            else
+            {
+                interactionText.text = "";
+            }
         }
     }
 	

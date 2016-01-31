@@ -31,17 +31,6 @@ public class VirtualFriends : MonoBehaviour {
 	public List<VirtualFriend> realFriends;
 	public List<VirtualFriend> gameFriends;
 	
-	public enum Mode {
-		Home,
-		Messages,
-		Message,
-		Game
-	}
-	
-	Mode mode = Mode.Home;
-	
-	
-	
 	[System.Serializable]
 	public class VirtualMessage
 	{
@@ -54,6 +43,9 @@ public class VirtualFriends : MonoBehaviour {
 		public string messageText = "Hi there.";
 		public bool requestForHelp = false;
 		public int powerNeededToHelp = 100;
+		
+		public string triggerTargetName = "";
+		public string triggerTargetMethod = "DoActivateTrigger";
 		/// <summary>
 		/// The time when the message will be received.
 		/// </summary>
@@ -115,12 +107,19 @@ public class VirtualFriends : MonoBehaviour {
 	
 	public void MessageNotification()
 	{
+		if(nextMessage.triggerTargetName!="")
+		{
+			GameObject go = GameObject.Find(nextMessage.triggerTargetName);
+			go.BroadcastMessage(nextMessage.triggerTargetMethod);
+		}
+		
 		gameObject.GetComponent<AudioSource>().PlayOneShot(messageReceivedClip);
 		unreadMessages++;
 		unreadMessagesText.text = unreadMessages+"";
-		if (mode == Mode.Messages)
+		
+        if (this.buttonGridLayoutGroup.IsActive())
 		{
-			MenubarButton();
+			this.LoadInbox();
 		}
 	}
 	
@@ -138,17 +137,14 @@ public class VirtualFriends : MonoBehaviour {
 		ReceiveMessages();
 	}
 	
-	public GameObject messagesUICanvas;
-	public GameObject messageUICanvas;
-	public GameObject gameUICanvas;
-	
 	public GridLayoutGroup buttonGridLayoutGroup;
 	public GameObject messageButtonTemplate;
+    public MessageScreenStateToggler messageToggler;
+    public MessageDisplayHandler messageDisplay;
 	
-	public void MenubarButton()
+	public void LoadInbox()
 	{
-		mode = Mode.Messages;
-		if(buttonGridLayoutGroup!=null)
+		if(buttonGridLayoutGroup != null)
 		{
 			Button[] buttons = buttonGridLayoutGroup.GetComponentsInChildren<Button>();
 			foreach (Button b in buttons)
@@ -166,9 +162,6 @@ public class VirtualFriends : MonoBehaviour {
 				i++;
 			}
 		}
-		messagesUICanvas.SetActive(true);
-		gameUICanvas.SetActive(false);
-		messageUICanvas.SetActive(false);
 	}
 	
 	/// <summary>
@@ -194,8 +187,6 @@ public class VirtualFriends : MonoBehaviour {
 		Debug.Log("MessageButton()");
 		if(inbox.Count >= messageIndex+1)
 		{
-			mode = Mode.Message;
-		
 			displayedMessage = inbox[messageIndex];
 		
 			fromText.text = displayedMessage.VirtualFriendName;
@@ -208,22 +199,23 @@ public class VirtualFriends : MonoBehaviour {
 			{
 				displayedMessage.read = true;
 				unreadMessages--;
-				UnityEngine.Debug.Log("unreadMessages--");
+                unreadMessagesText.text = unreadMessages + "";
+                UnityEngine.Debug.Log("unreadMessages--");
 			}
-			messagesUICanvas.SetActive(false);
-			gameUICanvas.SetActive(false);
-			messageUICanvas.SetActive(true);
+
+            messageDisplay.ConfigureForMessage(displayedMessage);
+            messageDisplay.ReplyCallback = this.SuccessfulMessageReply;
+            messageToggler.FocusOnMessage();
 		}
 		else
 		{
 			Debug.Log("inbox["+messageIndex+"] !>= messageIndex+1");
 		}
 	}
-	public void GameButton()
-	{
-		mode = Mode.Game;
-		messagesUICanvas.SetActive(false);
-		gameUICanvas.SetActive(true);
-		messageUICanvas.SetActive(false);
-	}
+
+    public void SuccessfulMessageReply(VirtualMessage message)
+    {
+        inbox.Remove(message);
+        //TODO - Add response message to list of upcoming messages
+    }
 }

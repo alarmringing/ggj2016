@@ -24,6 +24,7 @@ public class BC_ItemManager : MonoBehaviour {
 	//this a private float which keeps track of the starting cost of the item, it is also set by the "Inspector" 
 	//However this is private as it is only used when determining the cost of the next upgrade.
 	public float baseCost;
+    public float costIncrease = 1.15f;
 
 
 	//This sets 2 colors are public to allow you to change them within the "Inspector" but can still reference it in code.
@@ -53,7 +54,7 @@ public class BC_ItemManager : MonoBehaviour {
 		_slider = GetComponentInChildren<Slider> ();
 
 		//this gets the values we stored earlier for count and cost
-		count = PlayerPrefs.GetInt(name);
+		/*count = PlayerPrefs.GetInt(name);
 		cost = PlayerPrefs.GetFloat(name + "c");
 
         if (PlayerPrefs.GetInt(name + "IsUnlocked") == 1)
@@ -63,7 +64,7 @@ public class BC_ItemManager : MonoBehaviour {
         else
         {
             IsUnlocked = false;
-        }
+        }*/
 
 		if (cost == 0) {
 			cost = baseCost;
@@ -130,7 +131,7 @@ public class BC_ItemManager : MonoBehaviour {
 
             PlayerPrefs.SetInt(name + "IsUnlocked", 1);
 			//This is the same math that cookie clicker uses to determine the cost of the next upgrade.
-			cost = Mathf.Round((float)baseCost * Mathf.Pow(1.15f, count));
+			cost = Mathf.Round((float)baseCost * Mathf.Pow(this.costIncrease, count));
 
 					
 		}

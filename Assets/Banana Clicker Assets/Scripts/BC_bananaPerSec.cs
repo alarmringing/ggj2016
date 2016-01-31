@@ -42,10 +42,10 @@ public class BC_bananaPerSec : MonoBehaviour {
 	void Start(){
        
 
-		if (PlayerPrefs.GetFloat ("BananaCount") > 0) {
+		/*if (PlayerPrefs.GetFloat ("BananaCount") > 0) {
 			loadGame ();
 
-		}
+		}*/
 
 
 
@@ -280,10 +280,17 @@ public class BC_bananaPerSec : MonoBehaviour {
 
 		if (revenue >= 0) {
 
-			revenueHolder.SetActive (true);
-			revenueButton.SetActive (true);
-			revenuePanel.SetActive (true);
-			TimePassed.text = "Time since you last played: " + "\n" + Mathf.Abs (days) + " days, " + Mathf.Abs (hours) + " hours, " + Mathf.Abs (minutes) + " minutes, " + Mathf.Abs (seconds) + " seconds, " + "\n" + "Total Seconds Passed: " + totalSeconds + "\n" + "You made: " + BC_currencyConverter.Instance.GetCurrencyIntoString (revenue, false, false) + " Bananas!";
+            if (revenueHolder != null)
+			    revenueHolder.SetActive (true);
+
+            if (revenueButton != null)
+			    revenueButton.SetActive (true);
+
+            if (revenuePanel != null)
+			    revenuePanel.SetActive (true);
+
+            if (TimePassed != null)
+			    TimePassed.text = "Time since you last played: " + "\n" + Mathf.Abs (days) + " days, " + Mathf.Abs (hours) + " hours, " + Mathf.Abs (minutes) + " minutes, " + Mathf.Abs (seconds) + " seconds, " + "\n" + "Total Seconds Passed: " + totalSeconds + "\n" + "You made: " + BC_currencyConverter.Instance.GetCurrencyIntoString (revenue, false, false) + " Bananas!";
 			
 			
 		}
@@ -312,8 +319,7 @@ public class BC_bananaPerSec : MonoBehaviour {
 		//this hides the text and button
 		revenueHolder.SetActive (false);
 		revenueButton.SetActive (false);
-		revenuePanel.SetActive (false);
-
+        revenuePanel.SetActive(false);
 	}
 
 
@@ -322,7 +328,7 @@ public class BC_bananaPerSec : MonoBehaviour {
 
 	//you can call on application pause for that or just set the app to never pause and to exit on pause.
 	//this should be under build options for IOS
-	void OnApplicationQuit() {
+	/*void OnApplicationQuit() {
 
 
         Debug.Log("SaveGame OnApplicationQuit");
@@ -330,17 +336,17 @@ public class BC_bananaPerSec : MonoBehaviour {
 		
 		
 		
-	}
+	}*/
 
     //this function runs when the app is minimized on an android.
     //the debug are here so u know when they run.
-    void OnApplicationPause()
+    /*void OnApplicationPause()
     {
         Debug.Log("SaveGame OnApplicationPause");
 
         Application.Quit();
         //saveGame();
-    }
+    }*/
 
 
 }

@@ -11,13 +11,13 @@ public class GameClock : MonoBehaviour {
 	public string dateTimeClockString = "XX:XX PM";
 	// Use this for initialization
 	void Start () {
-		dateTime = System.DateTime.Now;
+		dateTime = new System.DateTime(2016,1,1,8,0,0);
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		dateTime = System.DateTime.Now;
-		dateTimeClockString = dateTime.ToLongTimeString() + " " + dateTime.ToString("tt", System.Globalization.CultureInfo.InvariantCulture);
+		dateTimeClockString = dateTime.ToShortTimeString()/* + " " + dateTime.ToString("tt", System.Globalization.CultureInfo.InvariantCulture)*/;
 		clockText.text = dateTimeClockString;
 	}
 }

@@ -48,8 +48,9 @@ public class BC_Click : MonoBehaviour {
 		bananas += bananasPerClick;
 
         //this instantiates a text object that says the total clicks it just added, it contains a script that makes it smoothly float up and disappear.
-        GameObject newObject = (GameObject)Instantiate(popupText, popupLoc.transform.position, Quaternion.identity);
-        newObject.GetComponent<RectTransform>().anchoredPosition = popupLoc.GetComponent<RectTransform>().anchoredPosition;
+        GameObject newObject = (GameObject)Instantiate(popupText, Vector3.zero, Quaternion.identity);
+        newObject.transform.SetParent(popupLoc.transform, false);
+        //newObject.GetComponent<RectTransform>().anchoredPosition = popupLoc.GetComponent<RectTransform>().anchoredPosition;
 
         //this is the old way i use to show the message.
         //StartCoroutine(ShowMessage("+" + bananasPerClick, 1));

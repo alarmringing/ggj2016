@@ -23,6 +23,7 @@ public class BC_upgradeManager : MonoBehaviour {
 	public float cost;
 	public int count = 0;
 	public int clickPower;
+    public float costIncrease = 1.15f;
 
 
 	//private variable used only for the math in increasing the cost of each upgrade after you buy one.
@@ -52,7 +53,7 @@ public class BC_upgradeManager : MonoBehaviour {
 		//sets basecost to cost as basecost is private and not accesible from the inspector and cost is.
 		baseCost = cost;
 		_slider = GetComponentInChildren<Slider> ();
-		count = PlayerPrefs.GetInt(name);
+		/*count = PlayerPrefs.GetInt(name);
 		cost = PlayerPrefs.GetFloat(name + "c");
 		if (cost == 0) {
 			cost = baseCost;
@@ -65,7 +66,7 @@ public class BC_upgradeManager : MonoBehaviour {
         else
         {
             IsUnlocked = false;
-        }
+        }*/
 
 
     }
@@ -121,7 +122,7 @@ public class BC_upgradeManager : MonoBehaviour {
             PlayerPrefs.SetInt(name + "IsUnlocked", 1);
 
             click.bananasPerClick += clickPower;
-			cost = Mathf.Round(baseCost * Mathf.Pow (1.15f, count));
+			cost = Mathf.Round(baseCost * Mathf.Pow (this.costIncrease, count));
 		}
 	}
 
