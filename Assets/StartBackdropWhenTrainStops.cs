@@ -14,7 +14,7 @@ public class StartBackdropWhenTrainStops : MonoBehaviour {
 		else
 		{
 			PlayerPrefs.SetString("Missed", "true");
-			Application.LoadLevel("Home");
+			Death.Die();
 		}
 	}
 	// Use this for initialization

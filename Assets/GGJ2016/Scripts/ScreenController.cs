@@ -30,7 +30,7 @@ public class ScreenController : MonoBehaviour {
 			GetComponent<Image>().CrossFadeAlpha(0.6f, 3.0f, false);
 			//WarningTxt.GetComponent<Text>().color = new Color(0f,0f,0f,1f);
 			yield return new WaitForSeconds(5f); 
-			SceneManager.LoadScene(0);
+			Death.Die();
 		}
 
 
