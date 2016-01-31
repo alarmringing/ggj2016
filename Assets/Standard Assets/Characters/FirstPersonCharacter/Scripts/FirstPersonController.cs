@@ -41,6 +41,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private float m_NextStep;
         private bool m_Jumping;
         private AudioSource m_AudioSource;
+		private float savedRunSpeed; //to allow setting runnability
 
         // Use this for initialization
         private void Start()
@@ -55,8 +56,18 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_Jumping = false;
             m_AudioSource = GetComponent<AudioSource>();
 			m_MouseLook.Init(transform , m_Camera.transform);
+
+			savedRunSpeed = m_RunSpeed; //to allow setting runnability
         }
 
+		//changes to allow setting various speeds
+		public void ReduceWalkingSpeed(float speed) { m_WalkSpeed = m_WalkSpeed * speed; }
+		public float GetWalkingSpeed(){ return m_WalkSpeed; }
+		public void AllowRunning(bool allow)
+		{
+			if(!allow) m_RunSpeed = 0;
+			else m_RunSpeed = savedRunSpeed;
+		}
 
         // Update is called once per frame
         private void Update()

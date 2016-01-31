@@ -20,7 +20,6 @@ public class CarLoopAnimControl : MonoBehaviour {
 
 		if(other.gameObject.tag == "Car")
 		{
-			Debug.Log("tag of this object is " + other.gameObject.tag);
 			Vector3 existingPos = other.gameObject.transform.position;
 			Vector3 otherPos = otherBarrier.transform.position;
 			if((existingPos.z - otherPos.z) < 0) other.gameObject.transform.position = new Vector3(existingPos.x, existingPos.y, (otherPos.z - 20));
