@@ -16,7 +16,7 @@ public class Seating : MonoBehaviour {
 		seated = true;
 		standingPosition = player.transform.position;
 		CharacterController cc = player.GetComponent<CharacterController>();
-		cc.height = 1f;
+		cc.height = 0.6f;
 		player.transform.position = seatedPositionTransform.position;
 		sitTrigger.on = false;
 		standTrigger.on = true;
@@ -25,7 +25,7 @@ public class Seating : MonoBehaviour {
 		
 	}
 	
-	public void Stand()
+	public virtual void Stand()
 	{
 		CharacterController cc = player.GetComponent<CharacterController>();
 		cc.height = 1.8f;
@@ -38,7 +38,7 @@ public class Seating : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
-		player = GameObject.FindGameObjectWithTag("Player");
+		//player = GameObject.FindGameObjectWithTag("Player");
 	}
 	
 	// Update is called once per frame

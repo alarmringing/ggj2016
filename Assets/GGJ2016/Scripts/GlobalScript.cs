@@ -5,36 +5,49 @@ public class GlobalScript : MonoBehaviour {
 
 
 	//spawning
-	public GameObject doorSpawnObj;
+	GameObject player;
+	GameObject playerController;
+	public Transform doorSpawnTransform;
+
+	//keeping track of it it has been visited
+	static bool hasBeenVisited = false;
+
+	//public GameObject doorSpawnObj;
 	Vector3 doorSpawnPoint;
 	Vector3 bedSpawnPoint;
 
 	void Start()
 	{
+		player = GameObject.FindWithTag("Player");
+		playerController = GameObject.FindWithTag("GameController");
+		
+		Debug.Log("initializing spawn points");
+		bedSpawnPoint = playerController.transform.position;
+		doorSpawnPoint = doorSpawnTransform.position;
+
+		Debug.Log("GLobal started, now spawning ");
 		Spawn();
 	}
 		
 	void Spawn()
 	{
-		GameObject player = GameObject.Find("Player");
-
+	
 		if(PlayerPrefs.HasKey("SpawnLoc")) //if after first level
 		{
-			int spawnKey = PlayerPrefs.GetInt("SpawnLoc");
-			if(spawnKey == 0) //spawn on bed
+			Debug.Log("spawning at specific points");
+			//int spawnKey = PlayerPrefs.GetInt("SpawnLoc");
+			if(!hasBeenVisited) //spawn on bed
 			{
-				player.transform.position = bedSpawnPoint;
+				playerController.transform.position = bedSpawnPoint;
+				hasBeenVisited = true;
 			}
 			else //spawn next to door
 			{
-				player.transform.position = doorSpawnPoint;
+				playerController.transform.position = doorSpawnPoint;
 			}	
-		}
-		else //if first level, initialize spawn points
+		} else
 		{
-			Debug.Log("initializing spawn points");
-			bedSpawnPoint = player.transform.position;
-			doorSpawnPoint = doorSpawnObj.transform.position;
+			playerController.transform.position = bedSpawnPoint;
 		}
 	}
 
