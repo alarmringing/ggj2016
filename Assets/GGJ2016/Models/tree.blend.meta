@@ -4,7 +4,21 @@ timeCreated: 1454230763
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    100000: leaves
+    100002: //RootNode
+    100004: tree
+    400000: leaves
+    400002: //RootNode
+    400004: tree
+    2300000: leaves
+    2300002: tree
+    3300000: leaves
+    3300002: tree
+    4300000: tree
+    4300002: leaves
+    7400000: Default Take
+    9500000: //RootNode
   materials:
     importMaterials: 1
     materialName: 0
