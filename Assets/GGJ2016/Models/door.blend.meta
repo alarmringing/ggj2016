@@ -4,7 +4,36 @@ timeCreated: 1454230764
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: door-frame
+    100004: door-left
+    100006: door-right
+    100008: window-left
+    100010: window-right
+    400000: //RootNode
+    400002: door-frame
+    400004: door-left
+    400006: door-right
+    400008: window-left
+    400010: window-right
+    2300000: door-frame
+    2300002: door-left
+    2300004: door-right
+    2300006: window-left
+    2300008: window-right
+    3300000: door-frame
+    3300002: door-left
+    3300004: door-right
+    3300006: window-left
+    3300008: window-right
+    4300000: door-right
+    4300002: door-left
+    4300004: door-frame
+    4300006: window-right
+    4300008: window-left
+    7400000: Default Take
+    9500000: //RootNode
   materials:
     importMaterials: 1
     materialName: 0
