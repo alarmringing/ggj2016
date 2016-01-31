@@ -17,7 +17,7 @@ public class GameClock : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		dateTime = System.DateTime.Now;
-		dateTimeClockString = dateTime.ToLongTimeString() + " " + dateTime.ToString("tt", System.Globalization.CultureInfo.InvariantCulture);
+		dateTimeClockString = dateTime.ToShortTimeString()/* + " " + dateTime.ToString("tt", System.Globalization.CultureInfo.InvariantCulture)*/;
 		clockText.text = dateTimeClockString;
 	}
 }

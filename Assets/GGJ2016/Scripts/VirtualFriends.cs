@@ -31,14 +31,14 @@ public class VirtualFriends : MonoBehaviour {
 	public List<VirtualFriend> realFriends;
 	public List<VirtualFriend> gameFriends;
 	
-	public enum Mode {
+	/*public enum Mode {
 		Home,
 		Messages,
 		Message,
 		Game
 	}
 	
-	Mode mode = Mode.Home;
+	Mode mode = Mode.Home;*/
 	
 	
 	
@@ -118,7 +118,8 @@ public class VirtualFriends : MonoBehaviour {
 		gameObject.GetComponent<AudioSource>().PlayOneShot(messageReceivedClip);
 		unreadMessages++;
 		unreadMessagesText.text = unreadMessages+"";
-		if (mode == Mode.Messages)
+		//if (mode == Mode.Messages)
+        if (this.buttonGridLayoutGroup.IsActive())
 		{
 			MenubarButton();
 		}
@@ -138,16 +139,17 @@ public class VirtualFriends : MonoBehaviour {
 		ReceiveMessages();
 	}
 	
-	public GameObject messagesUICanvas;
+	/*public GameObject messagesUICanvas;
 	public GameObject messageUICanvas;
-	public GameObject gameUICanvas;
+	public GameObject gameUICanvas;*/
 	
 	public GridLayoutGroup buttonGridLayoutGroup;
 	public GameObject messageButtonTemplate;
+    public MessageScreenStateToggler messageToggler;
 	
 	public void MenubarButton()
 	{
-		mode = Mode.Messages;
+		//mode = Mode.Messages;
 		if(buttonGridLayoutGroup!=null)
 		{
 			Button[] buttons = buttonGridLayoutGroup.GetComponentsInChildren<Button>();
@@ -166,9 +168,9 @@ public class VirtualFriends : MonoBehaviour {
 				i++;
 			}
 		}
-		messagesUICanvas.SetActive(true);
+		/*messagesUICanvas.SetActive(true);
 		gameUICanvas.SetActive(false);
-		messageUICanvas.SetActive(false);
+		messageUICanvas.SetActive(false);*/
 	}
 	
 	/// <summary>
@@ -194,7 +196,7 @@ public class VirtualFriends : MonoBehaviour {
 		Debug.Log("MessageButton()");
 		if(inbox.Count >= messageIndex+1)
 		{
-			mode = Mode.Message;
+			//mode = Mode.Message;
 		
 			displayedMessage = inbox[messageIndex];
 		
@@ -210,20 +212,24 @@ public class VirtualFriends : MonoBehaviour {
 				unreadMessages--;
 				UnityEngine.Debug.Log("unreadMessages--");
 			}
-			messagesUICanvas.SetActive(false);
+
+            messageToggler.FocusOnMessage();
+
+			/*messagesUICanvas.SetActive(false);
 			gameUICanvas.SetActive(false);
-			messageUICanvas.SetActive(true);
+			messageUICanvas.SetActive(true);*/
 		}
 		else
 		{
 			Debug.Log("inbox["+messageIndex+"] !>= messageIndex+1");
 		}
 	}
-	public void GameButton()
+
+	/*public void GameButton()
 	{
 		mode = Mode.Game;
 		messagesUICanvas.SetActive(false);
 		gameUICanvas.SetActive(true);
 		messageUICanvas.SetActive(false);
-	}
+	}*/
 }

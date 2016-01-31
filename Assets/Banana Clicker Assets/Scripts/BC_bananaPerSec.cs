@@ -280,10 +280,17 @@ public class BC_bananaPerSec : MonoBehaviour {
 
 		if (revenue >= 0) {
 
-			revenueHolder.SetActive (true);
-			revenueButton.SetActive (true);
-			revenuePanel.SetActive (true);
-			TimePassed.text = "Time since you last played: " + "\n" + Mathf.Abs (days) + " days, " + Mathf.Abs (hours) + " hours, " + Mathf.Abs (minutes) + " minutes, " + Mathf.Abs (seconds) + " seconds, " + "\n" + "Total Seconds Passed: " + totalSeconds + "\n" + "You made: " + BC_currencyConverter.Instance.GetCurrencyIntoString (revenue, false, false) + " Bananas!";
+            if (revenueHolder != null)
+			    revenueHolder.SetActive (true);
+
+            if (revenueButton != null)
+			    revenueButton.SetActive (true);
+
+            if (revenuePanel != null)
+			    revenuePanel.SetActive (true);
+
+            if (TimePassed != null)
+			    TimePassed.text = "Time since you last played: " + "\n" + Mathf.Abs (days) + " days, " + Mathf.Abs (hours) + " hours, " + Mathf.Abs (minutes) + " minutes, " + Mathf.Abs (seconds) + " seconds, " + "\n" + "Total Seconds Passed: " + totalSeconds + "\n" + "You made: " + BC_currencyConverter.Instance.GetCurrencyIntoString (revenue, false, false) + " Bananas!";
 			
 			
 		}
