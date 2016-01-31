@@ -4,6 +4,7 @@ using System.Collections;
 public class BoardTrain : MonoBehaviour {
 	public Transform trainParent;
 	public void DoActivateTrigger() {
+		Debug.Log("BoardTrain.DoActivateTrigger()!");
 		GameObject.FindWithTag("Player").transform.SetParent(trainParent);
 		PlayerPrefs.SetString("Onboard", "true");
 		//Application.LoadLevel("CaltrainInside");
