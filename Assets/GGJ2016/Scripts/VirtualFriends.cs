@@ -126,7 +126,14 @@ public class VirtualFriends : MonoBehaviour {
 		if(nextMessage.triggerTargetName!="")
 		{
 			GameObject go = GameObject.Find(nextMessage.triggerTargetName);
-			go.BroadcastMessage(nextMessage.triggerTargetMethod,SendMessageOptions.DontRequireReceiver);
+			if(go==null)
+			{
+				Debug.Log("nextMessage.triggerTargetName" + nextMessage.triggerTargetName + " not found.");
+			}
+			else
+			{
+				go.BroadcastMessage(nextMessage.triggerTargetMethod,SendMessageOptions.DontRequireReceiver);
+			}
 		}
 		
 		gameObject.GetComponent<AudioSource>().PlayOneShot(messageReceivedClip);
