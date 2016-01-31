@@ -30,6 +30,7 @@ public class VirtualFriends : MonoBehaviour {
 	
 	public List<VirtualFriend> realFriends;
 	public List<VirtualFriend> gameFriends;
+    public Texture2D defaultPortrait;
 	
 	[System.Serializable]
 	public class VirtualMessage
@@ -192,8 +193,8 @@ public class VirtualFriends : MonoBehaviour {
 			fromText.text = displayedMessage.VirtualFriendName;
 			subjectText.text = displayedMessage.messageSubject;
 			bodyText.text = displayedMessage.messageText;
-			//portraitImage.texture = displayedMessage. 
-			// Need to have a portrait getter for a given name
+            VirtualFriend friend = friendForName(displayedMessage.VirtualFriendName);
+            portraitImage.texture = friend != null ? friend.portrait : this.defaultPortrait;
 			
 			if (!displayedMessage.read)
 			{
@@ -217,5 +218,20 @@ public class VirtualFriends : MonoBehaviour {
     {
         inbox.Remove(message);
         //TODO - Add response message to list of upcoming messages
+    }
+
+    private VirtualFriend friendForName(string friendName)
+    {
+        foreach (VirtualFriend friend in this.gameFriends)
+        {
+            if (friend.name == friendName)
+                return friend;
+        }
+        foreach (VirtualFriend friend in this.realFriends)
+        {
+            if (friend.name == friendName)
+                return friend;
+        }
+        return null;
     }
 }
