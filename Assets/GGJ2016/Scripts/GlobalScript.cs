@@ -9,6 +9,9 @@ public class GlobalScript : MonoBehaviour {
 	GameObject playerController;
 	public Transform doorSpawnTransform;
 
+	//keeping track of it it has been visited
+	static bool hasBeenVisited = false;
+
 	//public GameObject doorSpawnObj;
 	Vector3 doorSpawnPoint;
 	Vector3 bedSpawnPoint;
@@ -32,10 +35,11 @@ public class GlobalScript : MonoBehaviour {
 		if(PlayerPrefs.HasKey("SpawnLoc")) //if after first level
 		{
 			Debug.Log("spawning at specific points");
-			int spawnKey = PlayerPrefs.GetInt("SpawnLoc");
-			if(spawnKey == 0) //spawn on bed
+			//int spawnKey = PlayerPrefs.GetInt("SpawnLoc");
+			if(!hasBeenVisited) //spawn on bed
 			{
 				playerController.transform.position = bedSpawnPoint;
+				hasBeenVisited = true;
 			}
 			else //spawn next to door
 			{

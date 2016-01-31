@@ -29,7 +29,7 @@ public class IpadController : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
-		
+				
 		player = GameObject.FindWithTag("Player");
 		playerController = GameObject.FindWithTag("GameController");
 		playerCamera = (GameObject.FindWithTag("MainCamera")).GetComponent<Camera>();
