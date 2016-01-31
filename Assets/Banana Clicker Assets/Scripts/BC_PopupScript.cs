@@ -9,6 +9,7 @@ public class BC_PopupScript : MonoBehaviour {
     public UnityEngine.UI.Text popupText;
     public Transform _canvas;
     public string ClickName;
+    public string CanvasName;
 
 
     //this is the first function to run when the app gets started.
@@ -24,7 +25,7 @@ public class BC_PopupScript : MonoBehaviour {
         popupText.text = "+" + clickRate;
 
         //set the parent of the object to the canvas, so that the position of the popus is right.
-        transform.SetParent(GameObject.Find("Canvas").transform, false) ;
+        transform.SetParent(GameObject.Find(this.CanvasName).transform, false) ;
         //destroy the popup after 1 second.
         Destroy(gameObject, 1f);
     }
