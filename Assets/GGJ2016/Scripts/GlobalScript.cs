@@ -27,6 +27,11 @@ public class GlobalScript : MonoBehaviour {
 
 		Debug.Log("GLobal started, now spawning ");
 		Spawn();
+
+
+		PlayerPrefs.SetFloat("GameBeginTime", Time.time);
+
+
 	}
 		
 	void Spawn()
@@ -53,6 +58,8 @@ public class GlobalScript : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+
+
 
 	}
 }
