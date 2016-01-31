@@ -15,6 +15,10 @@ public class PhoneTapper : MonoBehaviour
 	void Start()
 	{
         _phoneTapSender = GameObject.Find(this.TapSenderObjectName).GetComponent<PhoneTapSender>();
+
+        if (_phoneTapSender == null)
+            Debug.Log("fuck");
+
 		_phoneZoom = GetComponent<ZoomOnPhone>();
         _phoneScreenCollider = PhoneScreen.GetComponent<Collider>();
 	}
@@ -23,6 +27,7 @@ public class PhoneTapper : MonoBehaviour
 	{
 		if (_phoneZoom.IsZoomed)
 		{
+            Debug.Log("k");
             Ray ray = new Ray(this.CameraTransform.position, this.CameraTransform.forward);
             RaycastHit hit;
 
@@ -33,6 +38,7 @@ public class PhoneTapper : MonoBehaviour
 
             if (Input.GetMouseButtonDown(0))
             {
+                Debug.Log("ok");
                 _phoneTapSender.SendTap(uvHit);
             }
 		}
