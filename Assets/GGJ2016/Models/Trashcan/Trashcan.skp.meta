@@ -1,0 +1,139 @@
+fileFormatVersion: 2
+guid: 281b89ac25b144a1a8d9798b6354f4dd
+timeCreated: 1454225657
+licenseType: Free
+SketchUpImporter:
+  generateBackFace: 0
+  mergeCoplanarFaces: 0
+  selectedNodes: 0000000001000000020000000300000004000000050000000600000007000000
+  assetHash:
+    serializedVersion: 2
+    Hash: f9dee837dfa3e4519857f13b5840af13
+  longitude: -105.283
+  latitude: 40.017
+  northCorrection: -0
+  fileUnit: 0
+  sketchUpImportData:
+    defaultCamera:
+      position: {x: 2.2032452, y: 2.030034, z: -2.1434264}
+      lookAt: {x: 0.027106587, y: 0.9419647, z: 0.03271229}
+      up: {x: -0.23570226, y: 0.94280905, z: 0.23570226}
+      fov: 35
+      aspectRatio: 0
+      orthoSize: 1
+      isPerspective: 1
+    scenes:
+    - camera:
+        position: {x: 0.32871193, y: -1.060419, z: -0.8112246}
+        lookAt: {x: 0.2958407, y: -0.95437706, z: -0.7301021}
+        up: {x: 0.2938634, y: 0.6365697, z: -0.7130382}
+        fov: 45
+        aspectRatio: 0
+        orthoSize: 16.5
+        isPerspective: 0
+      name: Under Receptacle
+    - camera:
+        position: {x: 0.0500681, y: -0.16151883, z: -0.12356252}
+        lookAt: {x: 0.03572431, y: -0.115246, z: -0.08816364}
+        up: {x: 0.2938634, y: 0.6365697, z: -0.7130382}
+        fov: 45
+        aspectRatio: 0
+        orthoSize: 1
+        isPerspective: 0
+      name: Under Receptacle
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Group 4
+    100002: Group 6
+    100004: Image 3
+    100006: //RootNode
+    100008: s-20 1
+    100010: s-20
+    400000: Group 4
+    400002: Group 6
+    400004: Image 3
+    400006: //RootNode
+    400008: s-20 1
+    400010: s-20
+    2300000: Group 4
+    2300002: Group 6
+    2300004: Image 3
+    2300006: s-20 1
+    2300008: s-20
+    3300000: Group 4
+    3300002: Group 6
+    3300004: Image 3
+    3300006: s-20 1
+    3300008: s-20
+    4300000: Mesh s-20
+    4300002: Mesh s-20
+    4300004: Mesh Group 4
+    4300006: Mesh Group 6
+    6400000: Group 4
+    6400002: Group 6
+    6400004: Image 3
+    6400006: s-20
+  materials:
+    importMaterials: 1
+    materialName: 2
+    materialSearch: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.060000002
+    meshCompression: 0
+    addColliders: 1
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
