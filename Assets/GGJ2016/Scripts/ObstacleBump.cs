@@ -5,8 +5,8 @@ using UnityStandardAssets;
 public class ObstacleBump : MonoBehaviour {
 
 	GameObject UIPanel;
-	GameObject player;
-
+	GameObject player;	
+	
 	// Use this for initialization
 	void Start () 
 	{
@@ -24,7 +24,9 @@ public class ObstacleBump : MonoBehaviour {
 	void Bump() {
 		Debug.Log("Player Bump");
 		gameObject.GetComponent<AudioSource>().Play();
-		player.SendMessage("ReduceWalkingSpeed", 0.8);
+		player.SendMessage("ReduceWalkingSpeed", 0.9);
 		UIPanel.BroadcastMessage("Damaged", 0);
+				
+		
 	}
 }

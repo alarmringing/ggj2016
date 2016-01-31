@@ -7,6 +7,8 @@ public class GameClock : MonoBehaviour {
 	
 	public System.DateTime timePassedFormatted;
 	public Text clockText;
+	int initialHour = 7;
+	int initialMin = 55;
 	
 	public string dateTimeClockString = "XX:XX PM";
 	// Use this for initialization
@@ -18,8 +20,8 @@ public class GameClock : MonoBehaviour {
 	void Update () {
 
 		float timePassed = Time.time - PlayerPrefs.GetFloat("GameBeginTime");
-		int mins = (int)timePassed / 60 + 57;
-		int hrs  = (int)(timePassed / 60)/24 + 7;
+		int mins = (int)timePassed / 60 + initialMin;
+		int hrs  = (int)(timePassed / 60)/24 + initialHour;
 		int secs = (int)(timePassed % 60);
 		hrs = hrs - 12*(hrs/12);
 		if((mins / (60)) > 0) 

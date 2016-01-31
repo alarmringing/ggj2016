@@ -57,8 +57,8 @@ public class CarController : MonoBehaviour {
 		player.SendMessage("ReduceWalkingSpeed", 0.6); //cripple walking 
 		UIPanel.BroadcastMessage("Damaged", 1); //flash screen	
 
+		//fling player!!!!!!
 		float thrust = 100f;
-		//player.GetComponent<Rigidbody>().ki;
 		player.GetComponent<CharacterController>().enabled = false;
 		player.GetComponent<Rigidbody>().isKinematic = false;
 		player.GetComponent<Rigidbody>().AddForce(new Vector3(0.4f,2f,0) * thrust);
