@@ -50,7 +50,7 @@ public class PhoneScreenToggler : MonoBehaviour
                 _toggleText.text = this.GameText;
                 this.MessagesScreen.SetActive(true);
                 this.GameScreen.SetActive(false);
-                this.FriendsManager.MenubarButton();
+	            this.FriendsManager.LoadInbox();
                 break;
             case ScreenState.Game:
                 _toggleText.text = this.MessagesText;

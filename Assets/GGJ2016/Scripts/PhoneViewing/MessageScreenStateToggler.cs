@@ -50,7 +50,7 @@ public class MessageScreenStateToggler : MonoBehaviour
             case State.Inbox:
                 this.InboxPanel.SetActive(true);
                 this.MessagePanel.SetActive(false);
-                this.FriendsManager.MenubarButton();
+                this.FriendsManager.LoadInbox();
                 break;
             case State.Message:
                 this.InboxPanel.SetActive(false);
