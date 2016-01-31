@@ -11,6 +11,11 @@ public class LoadPhone : MonoBehaviour {
 		}
 	}
 	
+	void Start () {
+		Application.DontDestroyOnLoad(GameObject.Find("PhoneScene"));
+		
+	}
+	
 	// Update is called once per frame
 	void Update () {
 	
