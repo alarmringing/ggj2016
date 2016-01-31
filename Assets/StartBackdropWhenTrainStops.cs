@@ -7,7 +7,15 @@ public class StartBackdropWhenTrainStops : MonoBehaviour {
 	
 	public void StartBackdrop()
 	{
-		trigger.BroadcastMessage("DoActivateTrigger", SendMessageOptions.DontRequireReceiver);
+		if(PlayerPrefs.GetString("Onboard") == "true")
+		{
+			trigger.BroadcastMessage("DoActivateTrigger", SendMessageOptions.DontRequireReceiver);
+		}
+		else
+		{
+			PlayerPrefs.SetString("Missed", "true");
+			Application.LoadLevel("Home");
+		}
 	}
 	// Use this for initialization
 	void Start () {

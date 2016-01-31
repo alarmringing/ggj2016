@@ -19,7 +19,7 @@ public class GlobalScript : MonoBehaviour {
 	void Start()
 	{
 		player = GameObject.FindWithTag("Player");
-		playerController = GameObject.FindWithTag("GameController");
+		playerController = GameObject.FindWithTag("Player");
 		
 		Debug.Log("initializing spawn points");
 		bedSpawnPoint = playerController.transform.position;

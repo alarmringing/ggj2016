@@ -11,7 +11,7 @@ public class BoardTrain : MonoBehaviour {
 	}
 	// Use this for initialization
 	void Start () {
-	
+		PlayerPrefs.SetString("Onboard", "false");
 	}
 	
 	// Update is called once per frame

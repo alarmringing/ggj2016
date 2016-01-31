@@ -11,6 +11,7 @@ public class ActivateTriggerCrosshair : MonoBehaviour
 		Deactivate= 5, // Decativate target GameObject
 		Message   = 6, // Send a message to the target
 		URL 	  = 7, // Open a web page
+		LoadLevel = 8,
 	}
 
 	/// The action to accomplish
@@ -77,6 +78,9 @@ public class ActivateTriggerCrosshair : MonoBehaviour
 						break;	
 					case Mode.Deactivate:
 						targetGameObject.active = false;
+						break;
+					case Mode.LoadLevel:
+						Application.LoadLevel(messageArgument);
 						break;
 				case Mode.URL:
 					Application.OpenURL(url);
