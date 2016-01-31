@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class LoadPhone : MonoBehaviour {
 
@@ -7,7 +7,7 @@ public class LoadPhone : MonoBehaviour {
 	void Awake () {
 		if(!GameObject.Find("Phone View"))
 		{
-			Application.LoadLevelAdditive("PhoneScene");
+			SceneManager.LoadScene("PhoneScene", LoadSceneMode.Additive);
 		}
 	}
 	

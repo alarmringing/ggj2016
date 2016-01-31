@@ -18,6 +18,7 @@ public class PhoneTapSender : MonoBehaviour
 	
 	public void SendTap(Vector2 relativeOrigin)
     {
+        Debug.Log("hit sent");
         Vector2 cursorPosition = getCursorPositionFromRelativeOrigin(relativeOrigin, false);
         PointerEventData pointer = new PointerEventData(EventSystem.current);
         pointer.position = cursorPosition;
