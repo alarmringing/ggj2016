@@ -47,7 +47,7 @@ public class ActivateTriggerCrosshair : MonoBehaviour
 		{
 			triggerCount--;
 
-			if (triggerCount > 0 || repeatTrigger) {
+			if (triggerCount >= 0 || repeatTrigger) {
 				Object currentTarget = target != null ? target : gameObject;
 				Behaviour targetBehaviour = currentTarget as Behaviour;
 				GameObject targetGameObject = currentTarget as GameObject;

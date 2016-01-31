@@ -43,6 +43,9 @@ public class VirtualFriends : MonoBehaviour {
 		public string messageText = "Hi there.";
 		public bool requestForHelp = false;
 		public int powerNeededToHelp = 100;
+		
+		public string triggerTargetName = "";
+		public string triggerTargetMethod = "DoActivateTrigger";
 		/// <summary>
 		/// The time when the message will be received.
 		/// </summary>
@@ -104,6 +107,12 @@ public class VirtualFriends : MonoBehaviour {
 	
 	public void MessageNotification()
 	{
+		if(nextMessage.triggerTargetName!="")
+		{
+			GameObject go = GameObject.Find(nextMessage.triggerTargetName);
+			go.BroadcastMessage(nextMessage.triggerTargetMethod);
+		}
+		
 		gameObject.GetComponent<AudioSource>().PlayOneShot(messageReceivedClip);
 		unreadMessages++;
 		unreadMessagesText.text = unreadMessages+"";
