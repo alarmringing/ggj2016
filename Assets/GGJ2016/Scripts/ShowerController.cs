@@ -4,7 +4,7 @@ using System.Collections;
 public class ShowerController : Seating {
 
 	float startTime;
-	float useShowerTime = 30.0f;
+	float useShowerTime = 20.0f;
 
 	// Use this for initialization
 	public void StartShower () {
