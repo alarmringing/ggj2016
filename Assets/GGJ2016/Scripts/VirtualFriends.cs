@@ -30,6 +30,7 @@ public class VirtualFriends : MonoBehaviour {
 	
 	public List<VirtualFriend> realFriends;
 	public List<VirtualFriend> gameFriends;
+    public Texture2D defaultPortrait;
 	
 	[System.Serializable]
 	public class VirtualMessage
@@ -40,7 +41,8 @@ public class VirtualFriends : MonoBehaviour {
 		public bool helped = false;
 		public string VirtualFriendName = "Tom";
 		public string messageSubject = "Hi";
-		public string messageText = "Hi there.";
+        [TextArea(3, 10)]
+        public string messageText = "Hi there.";
 		public bool requestForHelp = false;
 		public int powerNeededToHelp = 100;
 		
@@ -50,6 +52,9 @@ public class VirtualFriends : MonoBehaviour {
 		/// The time when the message will be received.
 		/// </summary>
 		public float timeLimitForHelp = 30f;
+        public string successResponse = "";
+        public string failureResponse = "";
+        public VirtualMessage parentMessage = null;
 	}
 	
 	public List<VirtualMessage> futureMessages;
@@ -81,7 +86,7 @@ public class VirtualFriends : MonoBehaviour {
 		VirtualMessage soonestMessage = null;
 		if ( futureMessages!=null && futureMessages.Count>0)
 		{
-		nextMessage = futureMessages[0];
+		    nextMessage = futureMessages[0];
 			nextMessageTime = nextMessage.timeReceived;
 		}
 		/*
@@ -102,6 +107,17 @@ public class VirtualFriends : MonoBehaviour {
 		}
 		*/
 	}
+
+    public void InsertMessage(VirtualMessage message)
+    {
+        int i = 0;
+        for (; i < this.futureMessages.Count; ++i)
+        {
+            if (futureMessages[i].timeReceived > message.timeReceived)
+                break;
+        }
+        futureMessages.Insert(i, message);
+    }
 	
 	public AudioClip messageReceivedClip;
 	
@@ -116,6 +132,26 @@ public class VirtualFriends : MonoBehaviour {
 		gameObject.GetComponent<AudioSource>().PlayOneShot(messageReceivedClip);
 		unreadMessages++;
 		unreadMessagesText.text = unreadMessages+"";
+
+        if (nextMessage.requestForHelp)
+        {
+            VirtualMessage failureMessage = new VirtualMessage();
+            failureMessage.timeReceived = nextMessage.timeReceived + nextMessage.timeLimitForHelp;
+            failureMessage.VirtualFriendName = nextMessage.VirtualFriendName;
+            failureMessage.messageSubject = "Defenses failed!";
+            failureMessage.messageText = nextMessage.failureResponse;
+            failureMessage.successResponse = nextMessage.successResponse;
+            failureMessage.triggerTargetName = "PhoneGameManager";
+            failureMessage.triggerTargetMethod = "Attack";
+            failureMessage.parentMessage = nextMessage;
+
+            InsertMessage(failureMessage);
+        }
+
+        if (nextMessage.parentMessage != null)
+        {
+            this.inbox.Remove(nextMessage.parentMessage);
+        }
 		
         if (this.buttonGridLayoutGroup.IsActive())
 		{
@@ -192,8 +228,8 @@ public class VirtualFriends : MonoBehaviour {
 			fromText.text = displayedMessage.VirtualFriendName;
 			subjectText.text = displayedMessage.messageSubject;
 			bodyText.text = displayedMessage.messageText;
-			//portraitImage.texture = displayedMessage. 
-			// Need to have a portrait getter for a given name
+            VirtualFriend friend = friendForName(displayedMessage.VirtualFriendName);
+            portraitImage.texture = friend != null && friend.portrait != null ? friend.portrait : this.defaultPortrait;
 			
 			if (!displayedMessage.read)
 			{
@@ -216,6 +252,30 @@ public class VirtualFriends : MonoBehaviour {
     public void SuccessfulMessageReply(VirtualMessage message)
     {
         inbox.Remove(message);
-        //TODO - Add response message to list of upcoming messages
+
+        foreach (VirtualMessage futureMessage in futureMessages)
+        {
+            if (futureMessage.parentMessage == message)
+            {
+                futureMessage.messageSubject = "Success!";
+                futureMessage.messageText = message.successResponse;
+                break;
+            }
+        }
+    }
+
+    private VirtualFriend friendForName(string friendName)
+    {
+        foreach (VirtualFriend friend in this.gameFriends)
+        {
+            if (friend.name == friendName)
+                return friend;
+        }
+        foreach (VirtualFriend friend in this.realFriends)
+        {
+            if (friend.name == friendName)
+                return friend;
+        }
+        return null;
     }
 }

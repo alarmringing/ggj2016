@@ -6,6 +6,7 @@ public class MessageScreenStateToggler : MonoBehaviour
     public GameObject InboxPanel;
     public GameObject MessagePanel;
     public VirtualFriends FriendsManager;
+    public LimitedDuration NotEnoughHandler;
     public State DefaultState;
 
     [System.Serializable]
@@ -27,6 +28,7 @@ public class MessageScreenStateToggler : MonoBehaviour
 
     public void ViewInbox()
     {
+        this.NotEnoughHandler.DeactivateText();
         _state = State.Inbox;
         activateScreen();
     }
@@ -35,6 +37,7 @@ public class MessageScreenStateToggler : MonoBehaviour
     {
         _state = State.Message;
         activateScreen();
+        this.NotEnoughHandler.DeactivateText();
     }
 
     /**
