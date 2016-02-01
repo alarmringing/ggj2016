@@ -2,9 +2,12 @@
 using System.Collections;
 
 public class StartBackdropWhenTrainStops : MonoBehaviour {
-	
+	public GameObject boarder;
 	public GameObject trigger;
-	
+	public void ActivateBoard()
+	{
+		boarder.SetActive(true);
+	}
 	public void StartBackdrop()
 	{
 		if(PlayerPrefs.GetString("Onboard") == "true")

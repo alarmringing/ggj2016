@@ -6,6 +6,7 @@ public class BoardTrain : MonoBehaviour {
 	public void DoActivateTrigger() {
 		Debug.Log("BoardTrain.DoActivateTrigger()!");
 		GameObject.FindWithTag("Player").transform.SetParent(trainParent);
+		//GameObject.FindWithTag("Player").transform.localPosition=Vector3.zero;
 		PlayerPrefs.SetString("Onboard", "true");
 		//Application.LoadLevel("CaltrainInside");
 	}
