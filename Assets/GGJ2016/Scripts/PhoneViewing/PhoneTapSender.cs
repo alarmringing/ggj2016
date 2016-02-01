@@ -8,13 +8,6 @@ public class PhoneTapSender : MonoBehaviour
     public GameObject RootUI;
     public GameObject CursorObject;
     public Vector2 ViewportSize;
-
-    private Camera _camera;
-	
-	void Awake()
-	{
-		_camera = GetComponent<Camera>();
-	}
 	
 	public void SendTap(Vector2 relativeOrigin)
     {

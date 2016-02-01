@@ -93,9 +93,11 @@ public class Crosshair : MonoBehaviour
                 ActivateTriggerCrosshair aTrigger = rayHit.transform.gameObject.GetComponent<ActivateTriggerCrosshair>();
                 if (aTrigger != null)
                 {
+                    Debug.Log("crosshair hit");
                     if (interactCrosshair != null)
                     {
                         SwapCrosshairs(interactCrosshair);
+                        Debug.Log("crosshair swap");
                     }
                     else
                     {
@@ -106,14 +108,15 @@ public class Crosshair : MonoBehaviour
                     }
                     targetObject = rayHit.transform.gameObject;
                     triggerMessage = aTrigger.activateOnShootMessage;
-                    if (lastTargetObject == null || targetObject != lastTargetObject)
+                    /*if (lastTargetObject == null || targetObject != lastTargetObject)
                     {
                         HoverSound();
-                    }
+                    }*/
                     lastTargetObject = targetObject;
                 }
                 else
                 {
+                    Debug.Log("crosshair no ray");
                     targetObject = null;
                     triggerMessage = "";
                 }
