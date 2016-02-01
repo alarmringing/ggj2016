@@ -1,12 +1,14 @@
 ﻿using UnityEngine;
-using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class Death : MonoBehaviour {
 	
 	public static void Die()
 	{
 		GameObject.Destroy(GameObject.Find("PhoneScene"));
-		SceneManager.LoadScene("Home");
+		Application.LoadLevel("Home");
+		Application.Quit();
+		
 	}
 	// Use this for initialization
 	void Start () {

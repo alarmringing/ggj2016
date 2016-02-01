@@ -15,11 +15,12 @@ public class GameClock : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		//dateTime = new System.DateTime(2016,1,1,8,0,0);
-		Time.timeScale=timeScaleSpeed;
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		if(timeScaleSpeed!=Time.timeScale){
+			Time.timeScale=timeScaleSpeed;}
 		
 		float timePassed = Time.time - PlayerPrefs.GetFloat("GameBeginTime");
 		int mins = (int)timePassed / 60 + initialMin;
