@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ActivateTriggerCrosshair : MonoBehaviour 
 {
@@ -67,7 +68,7 @@ public class ActivateTriggerCrosshair : MonoBehaviour
 						}
 						break;
 					case Mode.Activate:
-						targetGameObject.active = true;
+						targetGameObject.SetActive(true);
 						break;
 					case Mode.Enable:
 						if (targetBehaviour != null)
@@ -77,10 +78,10 @@ public class ActivateTriggerCrosshair : MonoBehaviour
 					targetGameObject.GetComponent<Animation>().Play(animationName,PlayMode.StopAll);
 						break;	
 					case Mode.Deactivate:
-						targetGameObject.active = false;
+						targetGameObject.SetActive(false);
 						break;
 					case Mode.LoadLevel:
-						Application.LoadLevel(messageArgument);
+						SceneManager.LoadScene(messageArgument);
 						break;
 				case Mode.URL:
 					Application.OpenURL(url);

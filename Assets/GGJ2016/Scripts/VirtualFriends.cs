@@ -82,8 +82,8 @@ public class VirtualFriends : MonoBehaviour {
 	public void DetermineNextMessage ()
 	{
 		nextMessage=null;
-		float soonestMessageTime = 0f;
-		VirtualMessage soonestMessage = null;
+		//float soonestMessageTime = 0f;
+		//VirtualMessage soonestMessage = null;
 		if ( futureMessages!=null && futureMessages.Count>0)
 		{
 		    nextMessage = futureMessages[0];

@@ -12,7 +12,7 @@ public class LoadPhone : MonoBehaviour {
 	}
 	
 	void Start () {
-		Application.DontDestroyOnLoad(GameObject.Find("PhoneScene"));
+		Object.DontDestroyOnLoad(GameObject.Find("PhoneScene"));
 		
 	}
 	
