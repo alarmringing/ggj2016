@@ -65,8 +65,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
 		public float GetWalkingSpeed(){ return m_WalkSpeed; }
 		public void AllowRunning(bool allow)
 		{
-			if(!allow) m_RunSpeed = 0;
-			else m_RunSpeed = savedRunSpeed;
+			//if(!allow) m_RunSpeed = 0;
+			//else m_RunSpeed = savedRunSpeed;
 		}
 
         // Update is called once per frame
