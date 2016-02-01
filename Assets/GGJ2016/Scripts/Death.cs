@@ -7,6 +7,8 @@ public class Death : MonoBehaviour {
 	{
 		GameObject.Destroy(GameObject.Find("PhoneScene"));
 		Application.LoadLevel("Home");
+		Application.Quit();
+		
 	}
 	// Use this for initialization
 	void Start () {
